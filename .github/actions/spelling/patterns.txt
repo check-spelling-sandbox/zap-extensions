@@ -1,0 +1,274 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# Automatically suggested patterns
+# hit-count: 5573 file-count: 863
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
+
+# hit-count: 79 file-count: 26
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# hit-count: 63 file-count: 17
+# w3
+\bw3\.org/[-0-9a-zA-Z/#.]+
+
+# hit-count: 18 file-count: 8
+# Compiler flags
+(?:^|[\t ,>"'`=(])-[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+
+# hit-count: 18 file-count: 5
+# Amazon
+\bamazon\.com/[-\w]+/(?:dp/[0-9A-Z]+|)
+
+# hit-count: 17 file-count: 7
+# Twitter status
+\btwitter\.com/[^/\s"')]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)
+
+# hit-count: 16 file-count: 10
+# Wikipedia
+\ben\.wikipedia\.org/wiki/[-\w%.#]+
+
+# hit-count: 14 file-count: 7
+# IServiceProvider
+\bI(?=(?:[A-Z][a-z]{2,})+\b)
+
+# hit-count: 13 file-count: 4
+# basic auth
+"Basic [-a-zA-Z=;:/0-9+]{3,}"
+
+# hit-count: 13 file-count: 1
+# javascript regex
+^\s*/\\[b].*/[gim]*\s*(?:\)(?:;|$)|,$)
+
+# hit-count: 10 file-count: 10
+# Google Fonts
+\bfonts\.(?:googleapis|gstatic)\.com/[-/?=:;+&0-9a-zA-Z]*
+
+# hit-count: 10 file-count: 6
+# stackexchange -- https://stackexchange.com/feeds/sites
+\b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/(?:questions/\w+/[-\w]+|a/)
+
+# hit-count: 8 file-count: 7
+# oracle
+\bdocs\.oracle\.com/[-0-9a-zA-Z./_?#&=]*
+
+# hit-count: 7 file-count: 2
+# javascript replace regex
+\.replace\(/[^/\s"]*/[gim]*\s*,
+
+# hit-count: 6 file-count: 3
+# Non-English
+[a-zA-Z]*[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3}[a-zA-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]*
+
+# hit-count: 6 file-count: 2
+# hex in url queries
+=[0-9a-fA-F]*?(?:[A-F]{3,}|[a-f]{3,})[0-9a-fA-F]*?&
+
+# hit-count: 5 file-count: 4
+# mailto urls
+mailto:[-a-zA-Z=;:/?%&0-9+@.]{3,}
+
+# hit-count: 5 file-count: 3
+# ibm
+[a-z.]*ibm\.com/[-_#=:%!?~.\\/\d\w]*
+
+# hit-count: 4 file-count: 2
+# IPv6
+\b(?:[0-9a-fA-F]{0,4}:){3,7}[0-9a-fA-F]{0,4}\b
+
+# hit-count: 3 file-count: 3
+# regex101
+\bregex101\.com/r/[^/\s"]+/\d+
+
+# hit-count: 2 file-count: 1
+# apple
+\bdeveloper\.apple\.com/[-\w?=/]+
+
+# hit-count: 2 file-count: 1
+# Google Accounts
+\baccounts.google.com/[-_/?=.:;+%&0-9a-zA-Z]*
+
+# hit-count: 2 file-count: 1
+# Punycode
+\bxn--[-0-9a-z]+
+
+# hit-count: 2 file-count: 1
+# javascript match regex
+\.match\(/[^/\s"]*/[gim]*\s*
+
+# hit-count: 1 file-count: 1
+# Update Lorem based on your content (requires `ge` and `w` from https://github.com/jsoref/spelling; and `review` from https://github.com/check-spelling/check-spelling/wiki/Looking-for-items-locally )
+# grep '^[^#].*lorem' .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
+# Warning, while `(?i)` is very neat and fancy, if you have some binary files that aren't proper unicode, you might run into:
+## Operation "substitution (s///)" returns its argument for non-Unicode code point 0x1C19AE (the code point will vary).
+## You could manually change `(?i)X...` to use `[Xx]...`
+## or you could add the files to your `excludes` file (a version after 0.0.19 should identify the file path)
+# Lorem
+(?:\w|\s|[,.])*\b(?i)(?:amet|consectetur|cursus|dolor|eros|ipsum|lacus|libero|ligula|lorem|magna|neque|nulla|suscipit|tempus)\b(?:\w|\s|[,.])*
+
+# hit-count: 1 file-count: 1
+# Google APIs
+\bgoogleapis\.(?:com|dev)/[a-z]+/(?:v\d+/|)[a-z]+/[-@:./?=\w+|&]+
+
+# hit-count: 1 file-count: 1
+# cdn.cloudflare.com
+\bcdnjs\.cloudflare\.com/[./\w]+
+
+# hit-count: 1 file-count: 1
+# medium
+\bmedium\.com/\@?[^/\s"]+/[-\w]+
+
+# hit-count: 1 file-count: 1
+# shields.io
+\bshields\.io/[-\w/%?=&.:+;,]*
+
+# hit-count: 1 file-count: 1
+# codepen
+\bcodepen\.io/[\w/]+
+
+# hit-count: 1 file-count: 1
+# JavaScript regular expressions
+# javascript test regex
+/.*/[gim]*\.test\(
+
+# data urls
+(['"])data:.*?\g{-1}
+data:[-a-zA-Z=;:/0-9+]*,\S*
+
+# YouTube
+https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_]*
+<\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
+\bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
+# Google Analytics
+\bgoogle-analytics\.com/collect.[-0-9a-zA-Z?%=&_.~]*
+# Google APIs
+\bgoogleapis\.com/[a-z]+/v\d+/[a-z]+/[@./?=\w]+
+\b[-a-zA-Z0-9.]*\bstorage\d*\.googleapis\.com(?:/\S*|)
+# Google Calendar
+\bcalendar\.google\.com/calendar(?:/u/\d+|)/embed\?src=[@./?=\w&%]+
+\w+\@group\.calendar\.google\.com\b
+# Google DataStudio
+\bdatastudio\.google\.com/(?:(?:c/|)u/\d+/|)(?:embed/|)(?:open|reporting|datasources|s)/[-0-9a-zA-Z]+(?:/page/[-0-9a-zA-Z]+|)
+# The leading `/` here is as opposed to the `\b` above
+# ... a short way to match `https://` or `http://` since most urls have one of those prefixes
+# Google Docs
+/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?
+# Google Groups
+\bgroups\.google\.com/(?:forum/#!|d/)(?:msg|topic)/[^/]+/[a-zA-Z0-9]+(?:/[a-zA-Z0-9]+|)
+# Google themes
+themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
+# Google CDN
+\bclients2\.google(?:usercontent|)\.com[-0-9a-zA-Z/.]*
+# Goo.gl
+/goo\.gl/[a-zA-Z0-9]+
+# Google Chrome Store
+\bchrome\.google\.com/webstore/detail/\w*(?:/\w*|)
+# Google Books
+\bbooks\.google\.(?:\w{2,4})/books\?[-\w\d=&#.]*
+
+# GitHub SHAs
+\bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+\bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
+# githubusercontent
+/[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
+# gist github
+/gist\.github\.com/[^/]+/[0-9a-f]+
+# git.io
+\bgit\.io/[0-9a-zA-Z]+
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+]*"
+# Contributor
+\[[^\]]+]\(https://github\.com/[^/]+\)
+# GHSA
+GHSA(?:-[0-9a-z]{4}){3}
+
+# microsoft
+(?:\b|\\n)(?:https?://|)(?:(?:download\.visualstudio|docs|msdn2?)\.microsoft|blogs\.msdn)\.com/[-_a-zA-Z0-9()=./%]*
+# powerbi
+\bapp\.powerbi\.com/reportEmbed/[^"' ]*
+
+# pastebin
+\bpastebin\.com/raw/[a-zA-Z]*
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
+# uuid:
+[<({"'>:][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[<'"})>]
+
+atob\((['"])[-a-zA-Z=;:/0-9+]*\g{-1}\)
+
+(['"])[0-9A-F]{32}\g{-1}
+# sha-... -- uses a fancy capture
+(['"]|&quot;)[0-9a-f]{40,}\g{-1}
+sha384-[-a-zA-Z=;:/0-9+]{64}\b
+distributionSha256Sum=[0-9a-f]+
+
+# URL escaped characters
+\%[0-9A-F]{2}
+
+# Lorem
+\bLorem[^"<]*
+
+# git
+/pack/pack-[0-9a-f]{40}\.
+/\.git/objects/[0-9a-f]{2}/[0-9a-f]{38}
+
+# specific stuff
+hashVal = "\w+"
+^\s*<p>Site genel olarak.*bulunmaktad.*$
+<blockquote>.*yorumlar onaydan.*$
+^\s*Bunun yan.*$
+>Ender.*burak.*$
+^ports\.port\..*$
+(\$\S+){3,}
+
+# lots of backslashes with an s
+\\{1,2}s
+
+# tests
+equalTo\("[-a-zA-Z=;:/0-9+]*"
+
+puts\("(?:\\n)?\\t\|.*\|(?:\\n)?"\)
+
+# https://github.com/zaproxy/zaproxy/search?q=scanFinshed
+\bscanFinshed
+
+# Requires 2.11 which isn't published
+\bisRunableStandalone\b
+
+# deprecated
+\bgetPaylaods\b
+protected List<Integer> getCriterianInScope
+
+# <word>v#
+[Vv]\d+(?:\b|(?=[a-zA-Z_]))
+
+# Questionably acceptable forms of `in to`
+# Personally, I prefer `log into`, but people object
+# https://www.tprteaching.com/log-into-log-in-to-login/
+\b[Ll]og in to\b
+
+# acceptable duplicates
+# ls directory listings
+[-bcdlpsw](?:[-r][-w][-Ssx]){3}\s+\d+\s+\S+\s+\S+\s+\d+\s+
+# mount
+\bmount\s+-t\s+(\w+)\s+\g{-1}\b
+# C types and repeated CSS values
+\s(center|div|inherit|long|LONG|none|normal|solid|thin|transparent|very)(?: \g{-1})+\s
+# C struct
+\bstruct\s+(\w+)\s+\g{-1}\b
+# go templates
+\s(\w+)\s+\g{-1}\s+\`(?:graphql|json|yaml):
+# javadoc / .net
+(?:[\\@](?:groupname|param)|(?:public|private)(?:\s+static|\s+readonly)*)\s+(\w+)\s+\g{-1}\s
+
+# Commit message -- Signed-off-by and friends
+^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$
+
+# Autogenerated revert commit message
+^This reverts commit [0-9a-f]{40}\.$
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
