@@ -589,7 +589,7 @@ public class SqlInjectionScanRule extends AbstractAppParamPlugin {
         log.debug("Doing RDBMS specific error based? {}", doSpecificErrorBased);
         log.debug("Doing generic RDBMS error based? {}", doGenericErrorBased);
         log.debug("Using a max of {} requests", doErrorMaxRequests);
-        log.debug("Doing expession based? {}", doExpressionBased);
+        log.debug("Doing expression based? {}", doExpressionBased);
         log.debug("Using a max of {} requests", doExpressionMaxRequests);
         log.debug("Using boolean based? {}", doBooleanBased);
         log.debug("Using a max of {} requests", doBooleanMaxRequests);
