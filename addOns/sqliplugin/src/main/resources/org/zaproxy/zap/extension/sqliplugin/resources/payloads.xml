@@ -4928,7 +4928,7 @@ Tag: <test>
         </details>
     </test>
 
-    <!-- Without parentesis because it never works with them, useful to exploit SQL injection in Oracle E-Business Suite Financials -->
+    <!-- Without parenthesis because it never works with them, useful to exploit SQL injection in Oracle E-Business Suite Financials -->
     <test>
         <title>Oracle time-based blind - Parameter replace (DBMS_LOCK.SLEEP)</title>
         <stype>5</stype>
