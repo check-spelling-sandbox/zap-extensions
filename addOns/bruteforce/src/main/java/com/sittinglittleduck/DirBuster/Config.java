@@ -70,7 +70,7 @@ public class Config {
      * reset all the fonts
      * fixed a bug in the proxy settings, where it did not save the proxy port number
      * fixed bug under osx where the advance options buttons are not shown
-     * fixed bug that stop recisive scanning from working
+     * fixed bug that stop recursive scanning from working
      * fixed bug where the parser workers did not restart
      *
      * 0.9.11
