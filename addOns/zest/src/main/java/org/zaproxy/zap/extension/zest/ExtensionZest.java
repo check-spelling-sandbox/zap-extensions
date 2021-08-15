@@ -459,7 +459,7 @@ public class ExtensionZest extends ExtensionAdaptor implements ProxyListener, Sc
         this.refreshMessage();
     }
 
-    public void perameterize(
+    public void parametrize(
             ZestScriptWrapper script,
             ScriptNode node,
             ZestRequest request,
