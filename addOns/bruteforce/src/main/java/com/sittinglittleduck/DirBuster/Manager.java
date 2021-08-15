@@ -983,7 +983,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
         // stop work gen from adding more the the queue
         workGen.skipCurrent();
 
-        // remove all items in the current work queue that are no loger required.
+        // remove all items in the current work queue that are no logger required.
         Object[] tempArray = workQueue.toArray();
         WorkUnit work = null;
         int totalRemoved = 0;
