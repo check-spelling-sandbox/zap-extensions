@@ -1792,7 +1792,7 @@ function defaultClearTimeout () {
 } ())
 function runTimeout(fun) {
     if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
+        //normal environments in sane situations
         return setTimeout(fun, 0);
     }
     // if setTimeout wasn't available but was latter defined
@@ -1817,7 +1817,7 @@ function runTimeout(fun) {
 }
 function runClearTimeout(marker) {
     if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
+        //normal environments in sane situations
         return clearTimeout(marker);
     }
     // if clearTimeout wasn't available but was latter defined
