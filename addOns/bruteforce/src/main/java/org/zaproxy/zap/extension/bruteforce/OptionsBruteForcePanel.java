@@ -92,7 +92,7 @@ public class OptionsBruteForcePanel extends AbstractParamPanel {
             GridBagConstraints gridBagConstraintsThreadsLable = new GridBagConstraints();
             GridBagConstraints gridBagConstraintsThreadsSlider = new GridBagConstraints();
             GridBagConstraints gridBagConstraintsDefaultFileLable = new GridBagConstraints();
-            GridBagConstraints gridBagConstraintsDefaultFlieList = new GridBagConstraints();
+            GridBagConstraints gridBagConstraintsDefaultFileList = new GridBagConstraints();
             GridBagConstraints gridBagConstraintsAddFileLable = new GridBagConstraints();
             GridBagConstraints gridBagConstraintsAddFileButton = new GridBagConstraints();
             GridBagConstraints gridBagConstraintsX = new GridBagConstraints();
@@ -162,15 +162,15 @@ public class OptionsBruteForcePanel extends AbstractParamPanel {
             gridBagConstraintsDefaultFileLable.insets = new Insets(2, 2, 2, 2);
             gridBagConstraintsDefaultFileLable.gridwidth = 1;
 
-            gridBagConstraintsDefaultFlieList.gridx = 1;
-            gridBagConstraintsDefaultFlieList.gridy = rowNumber;
-            gridBagConstraintsDefaultFlieList.weightx = 1.0;
-            gridBagConstraintsDefaultFlieList.fill = GridBagConstraints.HORIZONTAL;
-            gridBagConstraintsDefaultFlieList.ipadx = 0;
-            gridBagConstraintsDefaultFlieList.ipady = 0;
-            gridBagConstraintsDefaultFlieList.anchor = GridBagConstraints.NORTHWEST;
-            gridBagConstraintsDefaultFlieList.insets = new Insets(2, 2, 2, 2);
-            gridBagConstraintsDefaultFlieList.gridwidth = 1;
+            gridBagConstraintsDefaultFileList.gridx = 1;
+            gridBagConstraintsDefaultFileList.gridy = rowNumber;
+            gridBagConstraintsDefaultFileList.weightx = 1.0;
+            gridBagConstraintsDefaultFileList.fill = GridBagConstraints.HORIZONTAL;
+            gridBagConstraintsDefaultFileList.ipadx = 0;
+            gridBagConstraintsDefaultFileList.ipady = 0;
+            gridBagConstraintsDefaultFileList.anchor = GridBagConstraints.NORTHWEST;
+            gridBagConstraintsDefaultFileList.insets = new Insets(2, 2, 2, 2);
+            gridBagConstraintsDefaultFileList.gridwidth = 1;
 
             gridBagConstraintsAddFileLable.gridx = 0;
             gridBagConstraintsAddFileLable.gridy = ++rowNumber;
@@ -288,7 +288,7 @@ public class OptionsBruteForcePanel extends AbstractParamPanel {
             panelPortScan.add(getSliderThreadsPerScan(), gridBagConstraintsThreadsSlider);
             panelPortScan.add(getCheckBoxRecursive(), gridBagConstraintsRecursiveCheckBox);
             panelPortScan.add(jLabelDefaultFile, gridBagConstraintsDefaultFileLable);
-            panelPortScan.add(getDefaultFileList(), gridBagConstraintsDefaultFlieList);
+            panelPortScan.add(getDefaultFileList(), gridBagConstraintsDefaultFileList);
             panelPortScan.add(jLabelAddFile, gridBagConstraintsAddFileLable);
             panelPortScan.add(getAddFileButton(), gridBagConstraintsAddFileButton);
             panelPortScan.add(getCheckBoxBrowseFiles(), gridBagConstraintsBrowseFilesCheckBox);
