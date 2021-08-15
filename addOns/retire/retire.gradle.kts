@@ -8,7 +8,7 @@ zapAddOn {
     zapVersion.set("2.10.0")
 
     manifest {
-        author.set("Nikita Mundhada and the ZAP Dev Team")
+        author.set("Nikita Mundhad and the ZAP Dev Team")
         url.set("https://www.zaproxy.org/docs/desktop/addons/retire.js/")
         bundle {
             baseName.set("org.zaproxy.addon.retire.resources.Messages")
