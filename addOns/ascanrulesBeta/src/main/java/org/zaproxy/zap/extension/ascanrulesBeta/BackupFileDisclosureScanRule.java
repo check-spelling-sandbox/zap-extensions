@@ -412,7 +412,7 @@ public class BackupFileDisclosureScanRule extends AbstractAppPlugin {
         try {
             boolean gives404s = true;
             boolean parentgives404s = true;
-            byte[] nonexistparentmsgdata = null;
+            byte[] nonexistentparentmsgdata = null;
 
             URI originalURI = originalMessage.getRequestHeader().getURI();
 
@@ -465,7 +465,7 @@ public class BackupFileDisclosureScanRule extends AbstractAppPlugin {
             // now request a different (and non-existent) parent directory,
             // to see whether a non-existent parent folder causes a 404
             String[] pathbreak = temppath.split("/");
-            HttpMessage nonexistparentmsg = null;
+            HttpMessage nonexistentparentmsg = null;
             if (pathbreak.length
                     > 2) { // the file has a parent folder that is not the root folder (ie, there is
                 // a parent folder to mess with)
@@ -481,7 +481,7 @@ public class BackupFileDisclosureScanRule extends AbstractAppPlugin {
                 String randomparentpath = StringUtils.join(temppathbreak, "/");
 
                 log.debug("Trying non-existent parent path: {}", randomparentpath);
-                nonexistparentmsg =
+                nonexistentparentmsg =
                         new HttpMessage(
                                 new URI(
                                         originalURI.getScheme(),
@@ -490,24 +490,24 @@ public class BackupFileDisclosureScanRule extends AbstractAppPlugin {
                                         null,
                                         null));
                 try {
-                    nonexistparentmsg.setCookieParams(originalMessage.getCookieParams());
+                    nonexistentparentmsg.setCookieParams(originalMessage.getCookieParams());
                 } catch (Exception e) {
                     log.debug("Could not set the cookies from the base request: {}", e);
                 }
-                sendAndReceive(nonexistparentmsg, false);
-                nonexistparentmsgdata = nonexistparentmsg.getResponseBody().getBytes();
+                sendAndReceive(nonexistentparentmsg, false);
+                nonexistentparentmsgdata = nonexistentparentmsg.getResponseBody().getBytes();
                 // does the server give a 404 for a non-existent parent folder?
-                if (nonexistparentmsg.getResponseHeader().getStatusCode()
+                if (nonexistentparentmsg.getResponseHeader().getStatusCode()
                         != HttpStatusCode.NOT_FOUND) {
                     parentgives404s = false;
                     log.debug(
                             "The server does not return a 404 status for a non-existent parent path: {}",
-                            nonexistparentmsg.getRequestHeader().getURI());
+                            nonexistentparentmsg.getRequestHeader().getURI());
                 } else {
                     parentgives404s = true;
                     log.debug(
                             "The server gives a 404 status for a non-existent parent path: {}",
-                            nonexistparentmsg.getRequestHeader().getURI());
+                            nonexistentparentmsg.getRequestHeader().getURI());
                 }
             }
 
@@ -769,10 +769,10 @@ public class BackupFileDisclosureScanRule extends AbstractAppPlugin {
                 if (!isEmptyResponse(disclosedData)
                         && ((parentgives404s && requestStatusCode != HttpStatusCode.NOT_FOUND)
                                 || ((!parentgives404s)
-                                        && nonexistparentmsg.getResponseHeader().getStatusCode()
+                                        && nonexistentparentmsg.getResponseHeader().getStatusCode()
                                                 != requestStatusCode
                                         && (!Arrays.equals(
-                                                disclosedData, nonexistparentmsgdata))))) {
+                                                disclosedData, nonexistentparentmsgdata))))) {
                     newAlert()
                             .setConfidence(Alert.CONFIDENCE_MEDIUM)
                             .setName(
