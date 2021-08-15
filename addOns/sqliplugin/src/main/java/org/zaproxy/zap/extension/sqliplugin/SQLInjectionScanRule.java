@@ -1110,7 +1110,7 @@ public class SQLInjectionScanRule extends AbstractAppParamPlugin {
             // TO BE IMPLEMENTED
             // Here we can tamper content for WAF evasion
             // a good idea could be to use a generic class
-            // and instantiate one choosen SQLiTamper or more than one
+            // and instantiate one chosen SQLiTamper or more than one
             // who should set it? According to SQLMap it's something
             // that depends by the pentester...
             // Maybe create a metalanguage for this?
@@ -1355,7 +1355,7 @@ public class SQLInjectionScanRule extends AbstractAppParamPlugin {
     }
 
     /**
-     * Prepare the Payload prepending the choosen prefix element according to the used injection
+     * Prepare the Payload prepending the chosen prefix element according to the used injection
      * model
      *
      * @param payload
