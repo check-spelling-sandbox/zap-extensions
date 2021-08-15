@@ -817,7 +817,7 @@ public class GitMetadata {
             } else if (entryType == 0x6) {
                 // for 'DELTA_ENCODED object with offset to base'
                 // this object type is not common in small repos. it will get more common in larger
-                // Git repositorie.
+                // Git repositories.
                 int deltabaseoffset = readBigEndianModifiedBase128Number(entryBuffer);
                 int deltaoffsetBytesRead = this.tempbytesread;
                 log.debug(
