@@ -36,7 +36,7 @@ public class FilterResponce {
      * Clean the responce of a work unit
      *
      * @param toclean String to clean
-     * @param work Unit of work the toclean string refferes to
+     * @param work Unit of work the toclean string refers to
      * @return Cleaned responce
      */
     public static String CleanResponce(String toclean, WorkUnit work) {
