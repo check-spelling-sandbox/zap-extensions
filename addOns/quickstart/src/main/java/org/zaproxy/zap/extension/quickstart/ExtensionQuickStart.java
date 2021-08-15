@@ -354,7 +354,7 @@ public class ExtensionQuickStart extends ExtensionAdaptor
             }
         }
         switch (progress) {
-            case notstarted:
+            case pending:
             case started:
             case spider:
             case ajaxspider:

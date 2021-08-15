@@ -45,7 +45,7 @@ import org.zaproxy.zap.model.Target;
 public class AttackThread extends Thread {
 
     public enum Progress {
-        notstarted,
+        pending,
         started,
         spider,
         ajaxspider,

@@ -182,8 +182,7 @@ public class AttackPanel extends QuickStartSubPanel {
             progressLabel =
                     new JLabel(
                             Constant.messages.getString(
-                                    "quickstart.progress."
-                                            + AttackThread.Progress.notstarted.name()));
+                                    "quickstart.progress." + AttackThread.Progress.pending.name()));
         }
         return progressLabel;
     }
