@@ -11,7 +11,7 @@ curl -d '[{"key":"aa","value":"ee"},{"key":"cc","value":"ff"}]' -X POST http://w
 
 It also changes the path of requests starting http://www.example.com/test/ so that every other path element after the initial 'test' is replaced by '<ddn>'
 The built-in ZAP support for Data Driven Nodes (ie nodes where name is actually data rather than part of the application structure)
-only supports one DDN per URL. This script shows that site modifier scripts can support an arbritrary number of them.
+only supports one DDN per URL. This script shows that site modifier scripts can support an arbitrary number of them.
 To demonstate this run the following curl commands from the command line with this script enabled:
 
 export http_proxy=http://localhost:8090/
