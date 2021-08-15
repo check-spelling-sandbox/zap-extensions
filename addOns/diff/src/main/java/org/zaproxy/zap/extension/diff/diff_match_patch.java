@@ -1175,7 +1175,7 @@ public class diff_match_patch {
             pointer.remove();
           }
           if (both_types) {
-            // Factor out any common prefixies.
+            // Factor out any common prefixes.
             commonlength = diff_commonPrefix(text_insert, text_delete);
             if (commonlength != 0) {
               if (pointer.hasPrevious()) {
