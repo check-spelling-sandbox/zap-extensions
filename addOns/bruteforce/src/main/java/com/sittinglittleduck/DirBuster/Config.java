@@ -116,7 +116,7 @@ public class Config {
      *+ Impoved code, having run used "find bugs" to highlight issues
      *
      *0.9.7
-     *+ Improved the the content anylsis mode
+     *+ Improved the the content analysis mode
      *+ Added copy function to URL from running table
      *+ fixed the prue brute force work generator
      *+ added check to prevent the over writing of report files

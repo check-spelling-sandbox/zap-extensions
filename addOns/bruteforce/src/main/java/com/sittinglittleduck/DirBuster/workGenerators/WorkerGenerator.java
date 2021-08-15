@@ -253,7 +253,7 @@ public class WorkerGenerator implements Runnable {
                                 // BaseCase baseCaseObj = new BaseCase(currentURL, failcode, true,
                                 // failurl, baseResponce);
                                 // if the base case is null then we need to switch to content
-                                // anylsis mode
+                                // analysis mode
 
                                 // System.out.println("Gen about to add to queue");
                                 workQueue.put(

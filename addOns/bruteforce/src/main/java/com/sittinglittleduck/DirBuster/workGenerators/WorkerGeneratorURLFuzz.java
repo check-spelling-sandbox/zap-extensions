@@ -171,7 +171,7 @@ public class WorkerGeneratorURLFuzz implements Runnable {
                     URL currentURL = new URL(firstPart + urlFuzzStart + line + urlFuzzEnd);
                     // BaseCase baseCaseObj = new BaseCase(currentURL, failcode, true, failurl,
                     // baseResponce);
-                    // if the base case is null then we need to switch to content anylsis mode
+                    // if the base case is null then we need to switch to content analysis mode
                     workQueue.put(new WorkUnit(currentURL, true, method, baseCaseObj, line));
                 }
 
