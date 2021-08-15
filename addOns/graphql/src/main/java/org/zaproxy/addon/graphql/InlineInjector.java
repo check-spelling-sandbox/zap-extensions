@@ -178,7 +178,7 @@ public final class InlineInjector {
                                 .map(AstPrinter::printAstCompact)
                                 .collect(Collectors.joining(", "));
                 if (csVars.isEmpty()) {
-                    // Remove parantheses and extra whitespace.
+                    // Remove parentheses and extra whitespace.
                     startPos -= 2;
                     endPos++;
                 }
