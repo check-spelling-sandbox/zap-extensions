@@ -205,7 +205,7 @@ public class MongoDbInjectionScanRule extends AbstractAppParamPlugin {
 
     @Override
     public void init() {
-        LOG.debug("Initialising MongoDB penertration tests");
+        LOG.debug("Initialising MongoDB penetration tests");
         switch (this.getAttackStrength()) {
             case LOW:
                 SLEEP_SHORT_TIME = 1000;
