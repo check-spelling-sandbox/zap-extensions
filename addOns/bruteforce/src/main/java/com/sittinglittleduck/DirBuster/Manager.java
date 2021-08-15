@@ -86,7 +86,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     private int baseCaseCounterCorrection = 0;
     // used to store the value of items that will have been skipped
     private int workAmountCorrection = 0;
-    // total number of links pasrsed from the HTML that have been added to the work queue
+    // total number of links parsed from the HTML that have been added to the work queue
     private int parsedLinksProcessed = 0;
     // total number of basecases produced
     private int numberOfBaseCasesProduced = 0;
