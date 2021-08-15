@@ -69,7 +69,7 @@ public class ProcessChecker extends TimerTask {
             // add the number of base cases and the frist inital request
             totalToDo = totalToDo + manager.getNumberOfBaseCasesProduced();
 
-            // correct to deal with the intial dir we need to test
+            // correct to deal with the initial dir we need to test
             if (manager.getDoDirs()) {
                 totalToDo = totalToDo + 1;
             }

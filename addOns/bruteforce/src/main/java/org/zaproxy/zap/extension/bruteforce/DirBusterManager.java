@@ -116,7 +116,7 @@ public class DirBusterManager extends Manager {
         // add the number of base cases and the frist inital request
         totalToDo = totalToDo + this.getNumberOfBaseCasesProduced();
 
-        // correct to deal with the intial dir we need to test
+        // correct to deal with the initial dir we need to test
         if (this.getDoDirs()) {
             totalToDo = totalToDo + 1;
         }
