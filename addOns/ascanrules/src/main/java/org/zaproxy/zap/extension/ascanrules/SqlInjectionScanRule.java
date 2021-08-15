@@ -1873,7 +1873,7 @@ public class SqlInjectionScanRule extends AbstractAppParamPlugin {
                 if (confirmExpressionOutputStripped.compareTo(normalBodyOutputStripped) != 0) {
                     // the confirm query did not return the same results.  This means that arbitrary
                     // queries are not all producing the same page output.
-                    // this means the fact we earier reproduced the original page output with a
+                    // this means the fact we earlier reproduced the original page output with a
                     // modified parameter was not a coincidence
 
                     // Likely a SQL Injection. Raise it
