@@ -128,7 +128,7 @@ public class ProcessChecker extends TimerTask {
 
                 } else {
                     long timeLeft = (totalToDo - currentTotal) / averageLastTen;
-                    String timeToCompelete = convertSecsToTime(timeLeft);
+                    String timeToComplete = convertSecsToTime(timeLeft);
                     lastTotal = currentTotal;
                     LOG.debug(
                             "Current speed: {} request/sec\nAverage Speed: (T) {}, (C) {} requests/sec\nTotal Requests: {}/{}\nTime To Finish: {}\n{}",
@@ -137,7 +137,7 @@ public class ProcessChecker extends TimerTask {
                             averageLastTen,
                             currentTotal,
                             totalToDo,
-                            timeToCompelete,
+                            timeToComplete,
                             parseQueueLength);
                 }
 
