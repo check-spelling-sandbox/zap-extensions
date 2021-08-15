@@ -180,7 +180,7 @@ public class SQLiUnionEngine {
     }
 
     // ------------------------------------------
-    // Internal contants for payload management
+    // Internal constants for payload management
     // ------------------------------------------
     private static final String PREFIX_REGEX = "(?:\\s+(?:FIRST|SKIP)\\s+\\d+)*";
     private static final Pattern SELECT_CASE_PATTERN =
