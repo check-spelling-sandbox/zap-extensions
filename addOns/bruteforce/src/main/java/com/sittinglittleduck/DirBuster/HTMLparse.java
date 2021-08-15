@@ -155,7 +155,7 @@ public class HTMLparse extends Thread {
                         // if it is ok to process the link
                         if (process) {
 
-                            // check if the found item has already been procced
+                            // check if the found item has already been proceed
                             // System.out.println("Testing to see if found item (" + founditem + ")
                             // has already been done");
                             if (!manager.hasLinkBeenDone(founditem)) {
