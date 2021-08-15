@@ -58,7 +58,7 @@ public abstract class ChallengeCallbackImplementor implements CallbackImplemento
 
     private static ExtensionCallback extCallback;
 
-    /** Default contructor */
+    /** Default constructor */
     public ChallengeCallbackImplementor() {
         if (getExtensionCallback() != null) {
             getExtensionCallback().registerCallbackImplementor(this);

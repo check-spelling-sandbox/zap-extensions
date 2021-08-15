@@ -118,7 +118,7 @@ public class SQLiPayloadManager {
         return instance;
     }
 
-    /** Inner contructor used to create the Singleton */
+    /** Inner constructor used to create the Singleton */
     private SQLiPayloadManager() throws IOException, JDOMException {
         boundaries = new ArrayList<>();
         tests = new ArrayList<>();
