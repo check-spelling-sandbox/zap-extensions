@@ -252,7 +252,7 @@ public class HTMLparse extends Thread {
 
         try {
             boolean isDir = false;
-            String fileExtention = null;
+            String fileExtension = null;
             if (item.length() == 1 || item.length() == 0) {
                 // System.out.println("found a / in findBaseCasePoint");
                 return GenBaseCase.genBaseCase(
@@ -267,23 +267,23 @@ public class HTMLparse extends Thread {
 
             if (item.endsWith("/")) {
                 isDir = true;
-                fileExtention = null;
+                fileExtension = null;
             } else {
                 String file = array[array.length - 1];
                 int loc = file.indexOf(".");
                 if (loc != -1) {
-                    fileExtention = file.substring(loc + 1);
+                    fileExtension = file.substring(loc + 1);
                 } else {
-                    fileExtention = "";
+                    fileExtension = "";
                 }
             }
             // System.out.println("baseItem = " + baseItem);
-            // System.out.println("file extention = " + fileExtention);
+            // System.out.println("file extension = " + fileExtension);
 
             Thread.sleep(100);
 
             return GenBaseCase.genBaseCase(
-                    manager, manager.getFirstPartOfURL() + baseItem, isDir, fileExtention);
+                    manager, manager.getFirstPartOfURL() + baseItem, isDir, fileExtension);
         } catch (MalformedURLException ex) {
             LOG.debug("Bad URL", ex);
         } catch (IOException | InterruptedException ex) {

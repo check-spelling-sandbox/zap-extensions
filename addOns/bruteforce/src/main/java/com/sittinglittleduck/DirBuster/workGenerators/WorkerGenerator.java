@@ -49,7 +49,7 @@ public class WorkerGenerator implements Runnable {
     private BlockingQueue<DirToCheck> dirQueue;
     private String inputFile;
     private String firstPart;
-    private String fileExtention;
+    private String fileExtension;
     private String finished;
     private String started;
     private boolean stopMe = false;
@@ -68,12 +68,12 @@ public class WorkerGenerator implements Runnable {
         workQueue = manager.workQueue;
         dirQueue = manager.dirQueue;
         if (manager.isBlankExt()) {
-            fileExtention = "";
+            fileExtension = "";
         } else {
-            fileExtention = "." + manager.getFileExtention();
+            fileExtension = "." + manager.getFileExtension();
         }
 
-        // get the vector of all the file extention we need to use
+        // get the vector of all the file extension we need to use
         // extToCheck = manager.getExtToUse();
         inputFile = manager.getInputFile();
         firstPart = manager.getFirstPartOfURL();
@@ -158,7 +158,7 @@ public class WorkerGenerator implements Runnable {
                 // System.out.println("gen taken");
                 // get dir name
                 currentDir = tempDirToCheck.getName();
-                // get any extention that need to be checked
+                // get any extension that need to be checked
                 extToCheck = tempDirToCheck.getExts();
 
                 manager.setCurrentlyProcessing(currentDir);
@@ -288,25 +288,25 @@ public class WorkerGenerator implements Runnable {
                 baseResponce = null;
                 URL failurl = null;
 
-                // loop for all the different file extentions
+                // loop for all the different file extensions
                 for (int b = 0; b < extToCheck.size(); b++) {
                     // only test if we are surposed to
                     ExtToCheck extTemp = extToCheck.elementAt(b);
 
                     if (extTemp.toCheck()) {
 
-                        fileExtention = "";
+                        fileExtension = "";
                         if (extTemp.getName().equals(ExtToCheck.BLANK_EXT)) {
-                            fileExtention = "";
+                            fileExtension = "";
                         } else {
-                            fileExtention = "." + extTemp.getName();
+                            fileExtension = "." + extTemp.getName();
                         }
 
                         try {
-                            // get the base for this extention
+                            // get the base for this extension
                             baseCaseObj =
                                     GenBaseCase.genBaseCase(
-                                            manager, firstPart + currentDir, false, fileExtention);
+                                            manager, firstPart + currentDir, false, fileExtension);
                         } catch (IOException e) {
                             LOG.error(e);
                         }
@@ -349,7 +349,7 @@ public class WorkerGenerator implements Runnable {
                                                         firstPart
                                                                 + currentDir
                                                                 + line
-                                                                + fileExtention);
+                                                                + fileExtension);
                                         // BaseCase baseCaseObj = new BaseCase(currentURL, true,
                                         // failurl, baseResponce);
                                         workQueue.put(

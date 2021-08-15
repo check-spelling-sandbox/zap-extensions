@@ -40,7 +40,7 @@ public class BaseCase {
     // URL of the base that was requested
     private URL baseCaseRequestURL;
 
-    // used to store the fileextention used
+    // used to store the fileextension used
     private String fileExt = null;
 
     /*

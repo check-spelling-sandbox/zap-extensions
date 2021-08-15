@@ -50,12 +50,12 @@ public class GenBaseCase {
      * @param manager the manager class
      * @param url The directy or file we need a base case for
      * @param isDir true if it's dir, else false if it's a file
-     * @param fileExtention File extention to be scanned, set to null if it's a dir that is to be
+     * @param fileExtension File extension to be scanned, set to null if it's a dir that is to be
      *     tested
      * @return A BaseCase Object
      */
     public static BaseCase genBaseCase(
-            Manager manager, String url, boolean isDir, String fileExtention)
+            Manager manager, String url, boolean isDir, String fileExtension)
             throws MalformedURLException, IOException {
         String type;
         if (isDir) {
@@ -70,7 +70,7 @@ public class GenBaseCase {
         boolean useRegexInstead = false;
         String regex = null;
 
-        BaseCase tempBaseCase = manager.getBaseCase(url, isDir, fileExtention);
+        BaseCase tempBaseCase = manager.getBaseCase(url, isDir, fileExtension);
 
         if (tempBaseCase != null) {
             return tempBaseCase;
@@ -87,13 +87,13 @@ public class GenBaseCase {
             failurl = new URL(url + failString + "/");
         } else {
             if (manager.isBlankExt()) {
-                fileExtention = "";
-                failurl = new URL(url + failString + fileExtention);
+                fileExtension = "";
+                failurl = new URL(url + failString + fileExtension);
             } else {
-                if (!fileExtention.startsWith(".")) {
-                    fileExtention = "." + fileExtention;
+                if (!fileExtension.startsWith(".")) {
+                    fileExtension = "." + fileExtension;
                 }
-                failurl = new URL(url + failString + fileExtention);
+                failurl = new URL(url + failString + fileExtension);
             }
         }
 
@@ -180,7 +180,7 @@ public class GenBaseCase {
                         isDir,
                         failurl,
                         baseResponce,
-                        fileExtention,
+                        fileExtension,
                         useRegexInstead,
                         regex);
 

@@ -80,7 +80,7 @@ public class Config {
      * Improved the way results table works
      * Fixed a bug that caused responce to be displayed incorrectly
      * Fixed bug that selection from the tables to now work correctly
-     * Fixed bug that caused blank extentions to stop working at all!
+     * Fixed bug that caused blank extensions to stop working at all!
      *
      *0.9.10
      * + Fixed Bug that prevents it running on below java 1.6
@@ -106,7 +106,7 @@ public class Config {
      *+ Added feature to allow the setting of connection timeout, default is 30 seconds
      *+ Improved some parts of the GUI
      *+ Imporved the error checking during start up, it will no longer try to test servers that are down
-     *+ Will now scan mutiple file extentions
+     *+ Will now scan mutiple file extensions
      *+ Added information about the supplied lists
      *+ Changed links and branding
      *+ Fixed bug with stoped start point from being scanned e.g. /
@@ -129,7 +129,7 @@ public class Config {
      *+ Corrected all jTextAreas, so they now start at the top of the text when they need scroll
      *
      *0.9.6
-     *+ Dirbuster can now do file scanning with no extention.
+     *+ Dirbuster can now do file scanning with no extension.
      *+ View responce now shows information about errors as well
      *+ Removed all other imported source code, they will no be done via their own api's
      *

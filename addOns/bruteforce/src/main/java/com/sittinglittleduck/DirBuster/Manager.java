@@ -49,7 +49,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     private BruteForceURLFuzz workGenBruteFuzz;
     private String inputFile;
     private String firstPartOfURL;
-    private String extention;
+    private String extension;
     private Timer timer;
     private ProcessChecker task;
     private ProcessEnd task2;
@@ -74,9 +74,9 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     // used to record the total number of dirs that have been found
     // set to 1 as we there must always at least 1
     private int totalDirsFound = 1;
-    // setting for using a blank extention
+    // setting for using a blank extension
     private boolean blankExt = false;
-    // store of all extention that are to be tested
+    // store of all extension that are to be tested
     private Vector<ExtToCheck> extToUse = new Vector<>(10, 5);
     private Vector<BaseCase> producedBasesCases = new Vector<>(10, 10);
     // used to store all the links that have parsed, will not contain a list a all items, processed
@@ -150,7 +150,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     private URL targetURL = null;
     private String fileLocation = null;
     private String reportLocation = null;
-    private String fileExtentions = null;
+    private String fileExtensions = null;
     private String pointToStartFrom = null;
 
     // ZAP: Option to control whether only the dirs found under the startPoint should be
@@ -188,7 +188,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
             String protocol,
             String host,
             int port,
-            String extention,
+            String extension,
             int ThreadNumber,
             boolean doDirs,
             boolean doFiles,
@@ -199,7 +199,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
         this.startPoint = startPoint;
         this.inputFile = inputFile;
         this.firstPartOfURL = protocol + "://" + host + ":" + port;
-        this.extention = extention;
+        this.extension = extension;
         this.protocol = protocol;
         this.host = host;
         this.port = port;
@@ -240,7 +240,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
             String protocol,
             String host,
             int port,
-            String extention,
+            String extension,
             int ThreadNumber,
             boolean doDirs,
             boolean doFiles,
@@ -249,7 +249,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
         totalDone = 0;
         this.startPoint = startPoint;
         this.firstPartOfURL = protocol + "://" + host + ":" + port;
-        this.extention = extention;
+        this.extension = extension;
         this.protocol = protocol;
         this.host = host;
         this.port = port;
@@ -615,8 +615,8 @@ public class Manager implements ProcessChecker.ProcessUpdate {
         return firstPartOfURL;
     }
 
-    public String getFileExtention() {
-        return extention;
+    public String getFileExtension() {
+        return extension;
     }
 
     @Override
@@ -1105,12 +1105,12 @@ public class Manager implements ProcessChecker.ProcessUpdate {
         this.reportLocation = reportLocation;
     }
 
-    public String getFileExtentions() {
-        return fileExtentions;
+    public String getFileExtensions() {
+        return fileExtensions;
     }
 
-    public void setFileExtentions(String fileExtentions) {
-        this.fileExtentions = fileExtentions;
+    public void setFileExtensions(String fileExtensions) {
+        this.fileExtensions = fileExtensions;
     }
 
     public String getPointToStartFrom() {

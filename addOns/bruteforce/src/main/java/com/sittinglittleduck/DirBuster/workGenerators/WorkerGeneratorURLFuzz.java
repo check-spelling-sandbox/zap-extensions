@@ -49,7 +49,7 @@ public class WorkerGeneratorURLFuzz implements Runnable {
     private BlockingQueue<DirToCheck> dirQueue;
     private String inputFile;
     private String firstPart;
-    private String fileExtention;
+    private String fileExtension;
     private String finished;
     private String started;
     private boolean stopMe = false;
@@ -74,12 +74,12 @@ public class WorkerGeneratorURLFuzz implements Runnable {
         workQueue = manager.workQueue;
         dirQueue = manager.dirQueue;
         if (manager.isBlankExt()) {
-            fileExtention = "";
+            fileExtension = "";
         } else {
-            fileExtention = "." + manager.getFileExtention();
+            fileExtension = "." + manager.getFileExtension();
         }
 
-        // get the vector of all the file extention we need to use
+        // get the vector of all the file extension we need to use
         // extToCheck = manager.getExtToUse();
         inputFile = manager.getInputFile();
         firstPart = manager.getFirstPartOfURL();
