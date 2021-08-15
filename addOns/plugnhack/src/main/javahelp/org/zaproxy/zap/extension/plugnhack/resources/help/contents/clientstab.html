@@ -37,7 +37,7 @@ Plug-n-Hack Clients tab
 	This option will only be available if the relevant browser still has that page open,as PnH sends the payloads to the browser.<br>
 	Standard ‘XSS’ payloads can be used to detect DOM XSS vulnerabilities, but you will need to manually monitor the UI to see if any of them are successful.<br>
 	<br>
-	PnH also adds a Custom fuzzing file called “PlugnHack DOM XSS Oracle”.<br>
+	PnH also adds a Custom fuzzing file called “PluginHack DOM XSS Oracle”.<br>
 	This file is based on the OWASP XSS cheatsheet and invokes an ‘xss’ JavaScript method that is injected into the page. <br>
 	This method invokes the ZAP API which in turn flags the relevant attack in the UI - these are confirmed DOM XSS vulnerabilities, 
 	although (as always) you should check that they can really be exploited in the application you are testing without a tool like ZAP.<br>
