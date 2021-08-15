@@ -593,7 +593,7 @@ public class UsernameEnumerationScanRule extends AbstractAppPlugin {
                         // this might occur if the output returned for the URL changed mid-way.
                         // Perhaps a CAPTCHA has fired, or a WAF has kicked in.  Let's abort now so.
                         log.warn(
-                                "The modified URL [{}] (for [{}] parameter {}) does not produce stable output (after {} of {} steps). There is no static element in the output that can be used as a basis of comparison with the static output of the original questy. Perhaps a CAPTCHA or WAF has kicked in!!",
+                                "The modified URL [{}] (for [{}] parameter {}) does not produce stable output (after {} of {} steps). There is no static element in the output that can be used as a basis of comparison with the static output of the original query. Perhaps a CAPTCHA or WAF has kicked in!!",
                                 msgModifiedParam.getRequestHeader().getURI(),
                                 currentHtmlParameter.getType(),
                                 currentHtmlParameter.getName(),
