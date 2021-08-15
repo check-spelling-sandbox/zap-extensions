@@ -20,7 +20,7 @@
 package com.sittinglittleduck.DirBuster;
 
 /**
- * Stores basic configuration detials
+ * Stores basic configuration details
  *
  * @author James
  */
