@@ -106,7 +106,7 @@ public class Config {
      *+ Added feature to allow the setting of connection timeout, default is 30 seconds
      *+ Improved some parts of the GUI
      *+ Improved the error checking during start up, it will no longer try to test servers that are down
-     *+ Will now scan mutiple file extensions
+     *+ Will now scan multiple file extensions
      *+ Added information about the supplied lists
      *+ Changed links and branding
      *+ Fixed bug with stoped start point from being scanned e.g. /
