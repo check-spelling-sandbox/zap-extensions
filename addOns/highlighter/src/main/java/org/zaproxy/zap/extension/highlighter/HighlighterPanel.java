@@ -128,25 +128,25 @@ public class HighlighterPanel extends AbstractPanel implements ActionListener {
     }
 
     private void applyAll() {
-        LinkedList<HighlightSearchEntry> entrys = new LinkedList<>();
+        LinkedList<HighlightSearchEntry> entries = new LinkedList<>();
 
         // Save all UI elements
         for (HighlightEntryLineUi panelLine : panelList) {
             panelLine.save();
             HighlightSearchEntry entry = panelLine.getHighlightEntry();
             if (entry.getToken().length() > 0) {
-                entrys.add(entry);
+                entries.add(entry);
             }
         }
 
         // The new line
         panelLineExtra.save();
         if (extraHighlight.getToken().length() > 0) {
-            entrys.add(panelLineExtra.getHighlightEntry());
+            entries.add(panelLineExtra.getHighlightEntry());
         }
 
         // Store them in the highlight manager
-        highlighter.reinitHighlights(entrys);
+        highlighter.reinitHighlights(entries);
 
         // highlighter.writeConfigFile();
         reinit();
