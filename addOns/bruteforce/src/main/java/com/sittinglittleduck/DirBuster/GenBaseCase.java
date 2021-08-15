@@ -237,7 +237,7 @@ public class GenBaseCase {
     }
 
     /*
-     * this function is used to get base case again, so we can check that the base case is consitent.
+     * this function is used to get base case again, so we can check that the base case is consistent.
      */
     private static String getBaseCaseAgain(Manager manager, URL failurl, String failString)
             throws IOException {
