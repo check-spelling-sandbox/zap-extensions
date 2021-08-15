@@ -150,7 +150,7 @@ public class ProcessChecker extends TimerTask {
     }
 
     private String convertSecsToTime(long secs) {
-        // get the number of minuates
+        // get the number of minutes
         if (secs < 10) {
             return "00:00:0" + secs;
         }
