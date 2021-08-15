@@ -503,7 +503,7 @@ public class SQLiUnionEngine {
      * master..sysxlogins
      *
      * @param fields fields string to be processed
-     * @return fields string nulled, casted and concatened
+     * @return fields string nulled, casted and concatenated
      */
     private String getNullCastAndConcatenatedFields(String fields) {
 
