@@ -519,7 +519,7 @@ public class CacheableScanRule extends PluginPassiveScanner {
                     if (expiresHeadersFound > 1) {
                         expiresHeader = null;
                         logger.debug(
-                                "{} had multiple caching lifetime expirys defined by an HTTP response header 'Expires'. Invalidating all of these!",
+                                "{} had multiple caching lifetime expires defined by an HTTP response header 'Expires'. Invalidating all of these!",
                                 msg.getRequestHeader().getURI());
                     } else {
                         // we now have a single "expiry".
