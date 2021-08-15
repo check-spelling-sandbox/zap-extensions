@@ -121,7 +121,7 @@ public class GenBaseCase {
             baseResponce = FilterResponce.CleanResponce(baseResponce, failurl, failString);
 
             /*
-             * get the base case twice more, for consisitency checking
+             * get the base case twice more, for consistency checking
              */
             String baseResponce1 = baseResponce;
             String baseResponce2 = getBaseCaseAgain(manager, failurl, failString);
