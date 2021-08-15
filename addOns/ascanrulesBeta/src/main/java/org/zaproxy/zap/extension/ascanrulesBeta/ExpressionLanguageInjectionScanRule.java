@@ -154,7 +154,7 @@ public class ExpressionLanguageInjectionScanRule extends AbstractAppParamPlugin 
                 // We Found IT!
                 // First do logging
                 LOG.debug(
-                        "[Expression Langage Injection Found] on parameter [{}]  with payload [{}]",
+                        "[Expression Language Injection Found] on parameter [{}]  with payload [{}]",
                         paramName,
                         payload);
 
