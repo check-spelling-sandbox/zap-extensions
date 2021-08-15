@@ -33,7 +33,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * This class is to paser the returned html pages and extract other dirs and files from them
+ * This class is to parser the returned html pages and extract other dirs and files from them
  *
  * @author james
  */
