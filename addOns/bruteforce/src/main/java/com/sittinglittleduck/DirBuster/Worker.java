@@ -69,7 +69,7 @@ public class Worker implements Runnable {
         while (manager.hasWorkLeft()) {
 
             working = false;
-            // code to make the worker pause, if the pause button has been presed
+            // code to make the worker pause, if the pause button has been pressed
 
             // if the stop signal has been given stop the thread
             if (stop) {
