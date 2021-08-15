@@ -111,7 +111,7 @@ public class Config {
      *+ Changed links and branding
      *+ Fixed bug with stoped start point from being scanned e.g. /
      *+ Added HTML parsing of found pages
-     *+ Added optins to configure the HTML parsing
+     *+ Added options to configure the HTML parsing
      *+ Improved checking for if the server does not support HEAD requests
      *+ Improved code, having run used "find bugs" to highlight issues
      *
