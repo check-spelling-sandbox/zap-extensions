@@ -635,7 +635,7 @@ public class GitMetadata {
                 // pack file of the SHA11 entry we are looking at
                 // NB: the various tables in the "pack index" file are sorted by the corresponding
                 // SHA1.
-                // 2 adjacent entries in the offset table (for consequtive SHA11 entries) could have
+                // 2 adjacent entries in the offset table (for consecutive SHA11 entries) could have
                 // wildly different offsets into the "pack" file
                 // and the offsets in the table are therefore not sorted by offset.
                 // In order to calculate the deflated length of an entry in the pack file (which is
