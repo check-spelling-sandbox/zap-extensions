@@ -106,7 +106,7 @@ public class RelativePathConfusionScanRule extends AbstractAppPlugin {
         // The "style" tag is a bit different..
         // Example:	<div style="background: url(image.png)">
         // all except BASE, BASEFONT, HEAD, HTML, META, PARAM, SCRIPT, STYLE, TITLE can have the
-        // "style" atribute
+        // "style" attribute
         RELATIVE_LOADING_ATTRIBUTE_TO_TAGS.put("style", new String[] {""});
 
         // we also look at the body (no attribute) of the style tag, since this can contain CSS like
