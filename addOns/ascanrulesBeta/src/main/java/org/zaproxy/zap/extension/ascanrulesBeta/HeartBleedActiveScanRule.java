@@ -843,7 +843,7 @@ public class HeartBleedActiveScanRule extends AbstractHostPlugin {
      */
     static final byte heartbeatRecordByte = 0x18;
 
-    /** the beartbeat request that we will send to */
+    /** the heartbeat request that we will send to */
     static final byte heartbeatBuffer[] = {
         0x00,
         0x03, // data Length = 0x00 0x03 = 3 in decimal. This length is important later...
