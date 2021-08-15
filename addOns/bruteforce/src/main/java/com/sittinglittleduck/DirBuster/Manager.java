@@ -181,7 +181,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
         this.httpClient = httpClient;
     }
 
-    // set up dictionay based attack with normal start
+    // set up dictionary based attack with normal start
     public void setupManager(
             String startPoint,
             String inputFile,
