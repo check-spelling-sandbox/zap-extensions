@@ -693,7 +693,7 @@ public class GitMetadata {
      * specified offset
      *
      * @param packfiledata byte array containing the raw data associated with the pack file
-     * @param packfiledataoffset the offset for the specified intry into the raw pack file data
+     * @param packfiledataoffset the offset for the specified entry into the raw pack file data
      * @param entryLength the deflated length of the packfile object entry
      * @param packFileVersion the version of the pack file. The version determines the file format,
      *     and thus the object extraction logic.
