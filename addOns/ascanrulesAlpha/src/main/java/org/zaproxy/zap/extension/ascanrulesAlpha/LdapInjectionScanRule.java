@@ -405,12 +405,12 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
 
             // 2: try a separate case for where the LDAP injection point is *not* wrapped in
             // parentheses, like the following complete filter expression:
-            // "sn=Joe Bloggs"
+            // "sn=Joe Blogs"
             // this is very likely to be found in LDAP-based search pages and the like.
             // so what we do here is to use wildcards inserted into the middle of the original
             // value, to create a (hopefully) logically equivalent filter expression
             // like the following:
-            // "sn=Joe *loggs"
+            // "sn=Joe *logs"
             // but only do this if the param length is > 1, to eliminate false positives to some
             // degree.
             int paramLength = paramvalue.length();
