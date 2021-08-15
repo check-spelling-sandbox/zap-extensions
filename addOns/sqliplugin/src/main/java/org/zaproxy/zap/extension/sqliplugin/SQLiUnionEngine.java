@@ -716,7 +716,7 @@ public class SQLiUnionEngine {
             query = query.substring(0, query.indexOf(intoRegExp));
         }
 
-        // remove the working table if exixts
+        // remove the working table if exists
         if (fromTable != null) {
             int fromTableIndex = unionQuery.lastIndexOf(fromTable);
             if (fromTableIndex == unionQuery.length() - fromTable.length()) {
