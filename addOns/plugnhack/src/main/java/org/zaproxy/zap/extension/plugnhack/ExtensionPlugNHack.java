@@ -657,12 +657,12 @@ public class ExtensionPlugNHack extends ExtensionAdaptor
         return this.oracleManager.registerOracle(data);
     }
 
-    public void addOracleListnner(OracleListener listenner) {
-        this.oracleManager.addListener(listenner);
+    public void addOracleListener(OracleListener listener) {
+        this.oracleManager.addListener(listener);
     }
 
-    public void removeOracleListenner(OracleListener listenner) {
-        this.oracleManager.removeListener(listenner);
+    public void removeOracleListenner(OracleListener listener) {
+        this.oracleManager.removeListener(listener);
     }
 
     /*
@@ -691,12 +691,12 @@ public class ExtensionPlugNHack extends ExtensionAdaptor
         this.mpm.stopMonitoring(id);
     }
 
-    public void addMonitoredPageListenner(MonitoredPageListener listenner) {
-        this.mpm.addListener(listenner);
+    public void addMonitoredPageListenner(MonitoredPageListener listener) {
+        this.mpm.addListener(listener);
     }
 
-    public void removeMonitoredPageListenner(MonitoredPageListener listenner) {
-        this.mpm.removeListener(listenner);
+    public void removeMonitoredPageListenner(MonitoredPageListener listener) {
+        this.mpm.removeListener(listener);
     }
 
     protected String getApiRoot() {

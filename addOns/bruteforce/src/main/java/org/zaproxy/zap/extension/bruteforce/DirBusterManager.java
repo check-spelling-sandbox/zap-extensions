@@ -28,14 +28,14 @@ import org.apache.logging.log4j.Logger;
 
 public class DirBusterManager extends Manager {
 
-    private BruteForceListenner listenner;
+    private BruteForceListenner listener;
     private int total = 0;
     private boolean finished = false;
     private static Logger log = LogManager.getLogger(DirBusterManager.class);
 
-    public DirBusterManager(SimpleHttpClient httpClient, BruteForceListenner listenner) {
+    public DirBusterManager(SimpleHttpClient httpClient, BruteForceListenner listener) {
         super(httpClient);
-        this.listenner = listenner;
+        this.listener = listener;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class DirBusterManager extends Manager {
         }
         super.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
         log.debug("DirBusterManager.foundDir {} code: {}", url, statusCode);
-        listenner.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
+        listener.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
     }
 
     @Override
@@ -65,7 +65,7 @@ public class DirBusterManager extends Manager {
             String rawResponce,
             BaseCase baseCaseObj) {
         super.foundFile(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
-        listenner.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
+        listener.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
     }
 
     @Override
