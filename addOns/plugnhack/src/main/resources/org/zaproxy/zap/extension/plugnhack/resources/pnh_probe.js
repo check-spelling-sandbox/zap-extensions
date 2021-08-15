@@ -96,7 +96,7 @@ function getActorsListener(messagePeer, clientConfig) {
     return zapS4()+zapS4()+"-"+zapS4()+"-"+zapS4()+"-"+zapS4()+"-"+zapS4()+zapS4()+zapS4();
   }
 
-  // Actors which receieve messages from the tool
+  // Actors which receive messages from the tool
   var actors = {
     /*
      * set the location of the current window. Useful for, e.g. forcing the
