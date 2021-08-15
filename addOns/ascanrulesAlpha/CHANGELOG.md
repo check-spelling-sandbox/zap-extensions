@@ -131,7 +131,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## 20 - 2017-11-24
 
 - Code changes for Java 9 (Issue 2602).
-- Correct handling of messages with emtpy path.
+- Correct handling of messages with empty path.
 - Add Get for Post Scanner.
 
 ## 19 - 2017-05-25
