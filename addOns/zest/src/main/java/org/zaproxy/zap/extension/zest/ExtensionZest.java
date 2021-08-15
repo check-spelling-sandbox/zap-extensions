@@ -635,7 +635,7 @@ public class ExtensionZest extends ExtensionAdaptor implements ProxyListener, Sc
             logger.debug("addToParent parent=null msg={}", msg.getRequestHeader().getURI());
             this.dialogManager.showZestEditScriptDialog(null, null, prefix, true);
             if (msg != null) {
-                this.dialogManager.addDeferedMessage(msg);
+                this.dialogManager.addDeferredMessage(msg);
             }
         } else {
             logger.debug(
