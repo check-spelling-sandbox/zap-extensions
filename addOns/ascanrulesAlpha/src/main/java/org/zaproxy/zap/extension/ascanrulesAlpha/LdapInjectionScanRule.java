@@ -390,7 +390,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                             .setMessage(getBaseMsg())
                             .raise();
 
-                    logBoolenInjection(
+                    logBooleanInjection(
                             getBaseMsg(), paramname, appendTrueAttack, randomparameterAttack);
 
                     // all done for this parameter. return.
@@ -490,7 +490,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                             .setMessage(getBaseMsg())
                             .raise();
 
-                    logBoolenInjection(
+                    logBooleanInjection(
                             getBaseMsg(), paramname, hopefullyTrueAttack, randomparameterAttack);
 
                     // all done for this parameter. return.
@@ -517,7 +517,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
         }
     }
 
-    private static void logBoolenInjection(
+    private static void logBooleanInjection(
             HttpMessage msg, String parameterName, String attack, String falseAttack) {
         if (!log.isDebugEnabled()) {
             return;
