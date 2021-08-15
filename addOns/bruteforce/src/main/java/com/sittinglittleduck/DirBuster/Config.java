@@ -105,15 +105,15 @@ public class Config {
      *+ Added second status label for future use
      *+ Added feature to allow the setting of connection timeout, default is 30 seconds
      *+ Improved some parts of the GUI
-     *+ Imporved the error checking during start up, it will no longer try to test servers that are down
+     *+ Improved the error checking during start up, it will no longer try to test servers that are down
      *+ Will now scan mutiple file extensions
      *+ Added information about the supplied lists
      *+ Changed links and branding
      *+ Fixed bug with stoped start point from being scanned e.g. /
      *+ Added HTML parsing of found pages
      *+ Added optins to configure the HTML parsing
-     *+ Imporved checking for if the server does not support HEAD requests
-     *+ Impoved code, having run used "find bugs" to highlight issues
+     *+ Improved checking for if the server does not support HEAD requests
+     *+ Improved code, having run used "find bugs" to highlight issues
      *
      *0.9.7
      *+ Improved the the content analysis mode
