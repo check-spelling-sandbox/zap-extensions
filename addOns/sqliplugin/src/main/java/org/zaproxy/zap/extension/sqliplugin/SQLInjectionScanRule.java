@@ -60,7 +60,7 @@ public class SQLInjectionScanRule extends AbstractAppParamPlugin {
     public static final double WARN_TIME_STDEV = 0.5 * 1000;
     // Minimum time response set needed for time-comparison based on standard deviation
     public static final int MIN_TIME_RESPONSES = 10;
-    // Payload used for checking of existence of IDS/WAF (dummier the better)
+    // Payload used for checking of existence of IDS/WAF (dumber the better)
     // IDS_WAF_CHECK_PAYLOAD = "AND 1=1 UNION ALL SELECT 1,2,3,table_name FROM
     // information_schema.tables"
 
