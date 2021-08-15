@@ -736,8 +736,8 @@ public class UsernameEnumerationScanRule extends AbstractAppPlugin {
      * @return the Longest Common Subsequence of a and b
      */
     public String longestCommonSubsequence(String a, String b) {
-        HirshbergMatcher hirschberg = new HirshbergMatcher();
-        return hirschberg.getLCS(a, b);
+        HirshbergMatcher hirshberg = new HirshbergMatcher();
+        return hirshberg.getLCS(a, b);
     }
 
     private boolean shouldContinue(List<Context> contextList) {
