@@ -26,7 +26,7 @@ import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/** Util class to normliaze http responces */
+/** Util class to normalize http responces */
 public class FilterResponce {
 
     /** Creates a new instance of FilterResponce */
