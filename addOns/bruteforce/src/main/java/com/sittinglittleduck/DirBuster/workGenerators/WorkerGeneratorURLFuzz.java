@@ -131,7 +131,7 @@ public class WorkerGeneratorURLFuzz implements Runnable {
                             || responceCode == HttpStatus.BAD_REQUEST
                             || responceCode == HttpStatus.METHOD_NOT_ALLOWED) {
                         LOG.debug(
-                                "Changing to GET only HEAD test returned 501(method no implmented) or a 400");
+                                "Changing to GET only HEAD test returned 501(method no implemented) or a 400");
                         manager.setAuto(false);
                     }
                 } catch (MalformedURLException e) {

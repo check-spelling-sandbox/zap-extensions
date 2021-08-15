@@ -128,7 +128,7 @@ public class WorkerGenerator implements Runnable {
                         || responceCode == HttpStatus.BAD_REQUEST
                         || responceCode == HttpStatus.METHOD_NOT_ALLOWED) {
                     LOG.debug(
-                            "Changing to GET only HEAD test returned 501(method no implmented) or a 400");
+                            "Changing to GET only HEAD test returned 501(method no implemented) or a 400");
                     // switch the mode to just GET requests
                     manager.setAuto(false);
                 }
