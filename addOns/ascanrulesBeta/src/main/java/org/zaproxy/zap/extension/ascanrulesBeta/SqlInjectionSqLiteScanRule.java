@@ -421,7 +421,7 @@ public class SqlInjectionSqLiteScanRule extends AbstractAppParamPlugin {
                     long modifiedTimeUsed = msgDelay.getTimeElapsedMillis();
 
                     // before we do the time based checking, first check for a known error message
-                    // from the atatck, indicating a SQL injection vuln
+                    // from the attack, indicating a SQL injection vuln
                     for (Pattern errorMessagePattern : errorMessagePatterns) {
                         Matcher matcher =
                                 errorMessagePattern.matcher(msgDelay.getResponseBody().toString());
