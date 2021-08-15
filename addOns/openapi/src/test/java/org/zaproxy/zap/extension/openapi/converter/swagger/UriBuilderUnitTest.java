@@ -216,7 +216,7 @@ class UriBuilderUnitTest {
         PARSE_METHODS.forEach(
                 method -> {
                     // Given
-                    String value = "notscheme//";
+                    String value = "notascheme//";
                     // When / Then
                     IllegalArgumentException e =
                             assertThrows(
