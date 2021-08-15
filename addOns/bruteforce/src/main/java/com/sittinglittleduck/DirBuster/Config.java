@@ -170,5 +170,5 @@ public class Config {
     /*
      * marker to say if we should treat the server case sensative
      */
-    public static boolean caseInsensativeMode = false;
+    public static boolean caseInsensitiveMode = false;
 }

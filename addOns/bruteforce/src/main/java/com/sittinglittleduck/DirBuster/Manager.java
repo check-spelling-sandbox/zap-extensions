@@ -471,7 +471,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
 
             boolean isStartPoint;
 
-            if (Config.caseInsensativeMode) {
+            if (Config.caseInsensitiveMode) {
                 isStartPoint = url.getPath().equalsIgnoreCase(startPoint);
 
                 /*
@@ -486,7 +486,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
 
                 for (int a = 0; a < dirArray.length; a++) {
                     /*
-                     * perform case in seneative check
+                     * perform case insensitive check
                      */
                     if (url.getPath().equalsIgnoreCase(dirArray[a].getName())) {
                         foundDir = true;
@@ -916,9 +916,9 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     public synchronized boolean addParsedLink(String link) {
         // System.out.println("SBSB addParsedLink " + link);
         /*
-         * case insenataive mode
+         * case insensitive mode
          */
-        if (Config.caseInsensativeMode) {
+        if (Config.caseInsensitiveMode) {
 
             for (int a = 0; a < processedLinks.size(); a++) {
                 if (link.equalsIgnoreCase(processedLinks.elementAt(a))) {
