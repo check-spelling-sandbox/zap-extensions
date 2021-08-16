@@ -188,7 +188,7 @@ public class WorkerGenerator implements Runnable {
 
                 // generate work links
                 try {
-                    // readin dir names
+                    // read in dir names
                     BufferedReader d =
                             new BufferedReader(
                                     new InputStreamReader(new FileInputStream(inputFile)));
