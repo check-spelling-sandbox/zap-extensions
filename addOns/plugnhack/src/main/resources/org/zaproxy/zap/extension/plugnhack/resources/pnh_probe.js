@@ -267,7 +267,7 @@ function getActorsListener(messagePeer, clientConfig) {
     function hookNode(node) {
       if(node.contentWindow && node.contentWindow.postMessage) {
         node.addEventListener('load', function() {
-          //console.log("MODIFY TEH "+node.nodeName+"!!!");
+          //console.log("MODIFY THE "+node.nodeName+"!!!");
           if(!hookWindow(node.contentWindow)) {
             makeProxyFrame(node);
             hookWindow(node.contentWindow);
