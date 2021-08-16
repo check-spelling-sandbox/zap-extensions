@@ -151,7 +151,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                 break;
         }
         // how hard should we try to find an LDAP injection point (primarily by looking at how
-        // deeply embedded it might be in paremtheses)
+        // deeply embedded it might be in parentheses)
         // this is important in complex LDAP expressions which are deeply nested, i.e., where there
         // are various AND, OR, or NOT expressions
         // (&, |, ! respectively in LDAP)
