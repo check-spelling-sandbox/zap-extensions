@@ -135,7 +135,7 @@ public class Config {
      *
      *0.9.5
      *+ Fix now threads will actually stop!
-     *+ Added custom headers when making a get if we had a sucessfull HEAD
+     *+ Added custom headers when making a get if we had a successful HEAD
      *+ Fix to stop it adding extra threads when restarting
      *
      *0.9.4
