@@ -90,7 +90,7 @@ public class HTMLparse extends Thread {
 
                     Vector<HTMLelementToParse> elementsToParse = manager.getElementsToParse();
 
-                    // loop trought all the things we wish to parse
+                    // loop through all the things we wish to parse
                     for (int z = 0; z < elementsToParse.size(); z++) {
                         HTMLelementToParse elementToParse = elementsToParse.elementAt(z);
 
