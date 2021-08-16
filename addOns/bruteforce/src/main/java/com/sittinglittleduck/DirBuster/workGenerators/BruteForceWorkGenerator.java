@@ -89,7 +89,7 @@ public class BruteForceWorkGenerator implements Runnable {
     public void run() {
         boolean recursive = true;
 
-        // checks if the server surports heads requests
+        // checks if the server supports heads requests
 
         if (manager.getAuto()) {
             try {

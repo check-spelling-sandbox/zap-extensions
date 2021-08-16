@@ -77,7 +77,7 @@ public class BruteForceURLFuzz implements Runnable {
 
     @Override
     public void run() {
-        // checks if the server surports heads requests
+        // checks if the server supports heads requests
 
         if (manager.getAuto()) {
             try {

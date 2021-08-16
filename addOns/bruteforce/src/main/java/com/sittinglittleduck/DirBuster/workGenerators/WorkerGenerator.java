@@ -110,7 +110,7 @@ public class WorkerGenerator implements Runnable {
         }
         // -------------------------------------------------
 
-        // checks if the server surports heads requests
+        // checks if the server supports heads requests
         if (manager.getAuto()) {
             try {
                 URL headurl = new URL(firstPart);
@@ -137,7 +137,7 @@ public class WorkerGenerator implements Runnable {
             }
         }
 
-        // end of checks to see if server surpports head requests
+        // end of checks to see if server supports head requests
         int counter = 0;
 
         while ((!dirQueue.isEmpty() || !workQueue.isEmpty() || !manager.areWorkersAlive())
