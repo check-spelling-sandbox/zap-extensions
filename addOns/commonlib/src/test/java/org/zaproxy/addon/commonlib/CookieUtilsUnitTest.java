@@ -104,7 +104,7 @@ class CookieUtilsUnitTest {
     }
 
     @Test
-    void shouldNotFindAttributeIfCookieHasNoNameValueSepartor() {
+    void shouldNotFindAttributeIfCookieHasNoNameValueSeparator() {
         // Given
         String headerValue = "Name; Attribute1; Attribute2=AV2; ;;";
         String attribute = "Attribute1";
