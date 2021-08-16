@@ -769,7 +769,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     /*
      * used to add extra workers to the queue
      */
-    public void addWrokers(int number) {
+    public void addWorkers(int number) {
         int currentNumber = workers.size();
         for (int i = 0; i < number; i++) {
             int threadid = currentNumber + i;
