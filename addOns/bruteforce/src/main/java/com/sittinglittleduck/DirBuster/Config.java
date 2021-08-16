@@ -121,7 +121,7 @@ public class Config {
      *+ fixed the prue brute force work generator
      *+ added check to prevent the over writing of report files
      *+ minor layout changes
-     *+ better auto detection of when servers dont suport HEAD request
+     *+ better auto detection of when servers dont support HEAD request
      *+ Added the ability to display information about the base case for each found directory/file
      *+ Fixed Reporting to remove html code from reports
      *+ Changed dirbuster to lesser GPL
