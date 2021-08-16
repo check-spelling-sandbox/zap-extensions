@@ -69,7 +69,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     boolean recursive = true;
     // flag for if we are auto switching between HEADS and GETS
     private boolean auto = true;
-    // used for storing total numbers of trys per pass
+    // used for storing total numbers of tries per pass
     private double totalPass;
     // used to record the total number of dirs that have been found
     // set to 1 as we there must always at least 1

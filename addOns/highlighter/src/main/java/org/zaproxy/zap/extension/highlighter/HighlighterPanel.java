@@ -113,10 +113,10 @@ public class HighlighterPanel extends AbstractPanel implements ActionListener {
 
         // Line >0: Content
         int n = 1;
-        LinkedList<HighlightSearchEntry> newEntrys = highlighter.getHighlights();
+        LinkedList<HighlightSearchEntry> newEntries = highlighter.getHighlights();
         panelList = new LinkedList<>();
 
-        for (HighlightSearchEntry entry : newEntrys) {
+        for (HighlightSearchEntry entry : newEntries) {
             HighlightEntryLineUi panelLine = new HighlightEntryLineUi(userGridPanel, n++, entry);
             panelList.add(panelLine);
         }
