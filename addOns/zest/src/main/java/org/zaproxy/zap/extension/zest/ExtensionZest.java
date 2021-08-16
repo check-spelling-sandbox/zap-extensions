@@ -1436,7 +1436,7 @@ public class ExtensionZest extends ExtensionAdaptor implements ProxyListener, Sc
         int lastRow = this.getZestResultsPanel().getModel().getRowCount() - 1;
         ZestResultWrapper zrw = this.getZestResultsPanel().getModel().getHistoryReference(lastRow);
         zrw.setPassed(false);
-        // TODO use toUiFailureString varient?
+        // TODO use toUiFailureString variant?
         // zrw.setMessage(ZestZapUtils.toUiFailureString(za, response));
         zrw.setMessage(e.getMessage());
         this.getZestResultsPanel().getModel().fireTableRowsUpdated(lastRow, lastRow);
