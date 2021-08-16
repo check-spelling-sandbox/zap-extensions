@@ -988,7 +988,7 @@ public class SqlInjectionScanRule extends AbstractAppParamPlugin {
                     }
 
                     // if the results of the "AND 1=1" match the original query (using either the
-                    // stipped or unstripped versions), we may be onto something.
+                    // stripped or unstripped versions), we may be onto something.
                     if (andTrueBodyOutput[booleanStrippedUnstrippedIndex].compareTo(
                                     normalBodyOutput[booleanStrippedUnstrippedIndex])
                             == 0) {
