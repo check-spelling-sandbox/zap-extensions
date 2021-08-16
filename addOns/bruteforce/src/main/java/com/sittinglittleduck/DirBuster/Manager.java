@@ -827,7 +827,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
         }
     }
 
-    // used to re add stuff to the work as the reswult from a request from the work queue
+    // used to re add stuff to the work as the result from a request from the work queue
     public synchronized void addToDirQueue(String dir) {
         // System.out.println("SBSB addToDirQueue " + dir);
         try {
