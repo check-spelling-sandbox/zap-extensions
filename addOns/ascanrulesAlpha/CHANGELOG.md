@@ -231,7 +231,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Promoted to beta XXE and Padding Oracle Plugins
 - Added a new Expression Language Plugin
-- Implemented Internazionalization for ELInjection
+- Implemented Internationalization for ELInjection
 - Added ExampleSimpleActiveScanner
 
 ## 2 - 2013-09-11
