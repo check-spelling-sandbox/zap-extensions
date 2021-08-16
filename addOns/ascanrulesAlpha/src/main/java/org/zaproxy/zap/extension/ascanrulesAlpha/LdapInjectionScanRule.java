@@ -91,7 +91,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
             errorMessages = errorMessageFlat.split(":");
 
             for (String errorMessage :
-                    errorMessages) { // for each error message for the given LDAP implemention
+                    errorMessages) { // for each error message for the given LDAP implementation
                 // compile it into a pattern
                 errorPattern = Pattern.compile(errorMessage);
 
@@ -625,7 +625,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                 }
                 return true; // threw an alert
             }
-        } // for each error message for the given LDAP implemention
+        } // for each error message for the given LDAP implementation
 
         return false; // did not throw an alert
     }
