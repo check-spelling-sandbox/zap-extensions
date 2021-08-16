@@ -617,13 +617,13 @@ public class ExtensionPlugNHack extends ExtensionAdaptor
 
     private String getPnhScript() throws ApiException {
         if (pnhScript == null) {
-            pnhScript = ExtensionPlugNHack.getStringReource("resources/pnh_probe.js");
+            pnhScript = ExtensionPlugNHack.getStringResource("resources/pnh_probe.js");
         }
 
         return pnhScript;
     }
 
-    public static String getStringReource(String resourceName) throws ApiException {
+    public static String getStringResource(String resourceName) throws ApiException {
         InputStream in = null;
         StringBuilder sb = new StringBuilder();
         try {
