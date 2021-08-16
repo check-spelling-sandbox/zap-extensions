@@ -103,7 +103,7 @@ public class PaddingOracleScanRule extends AbstractAppParamPlugin {
     }
 
     /**
-     * Scan for Padding Oracle Vulnerabilites
+     * Scan for Padding Oracle Vulnerabilities
      *
      * @param msg a request only copy of the original message (the response isn't copied)
      * @param paramName the parameter name that need to be exploited
