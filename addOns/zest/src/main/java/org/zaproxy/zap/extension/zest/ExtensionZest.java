@@ -1042,7 +1042,7 @@ public class ExtensionZest extends ExtensionAdaptor implements ProxyListener, Sc
             next = (ScriptNode) next.getNextSibling();
         }
         if (next == null) {
-            logger.error("Cant move node down {}", node.getNodeName());
+            logger.error("Can't move node down {}", node.getNodeName());
             return;
         }
         if (ZestZapUtils.getElement(node) instanceof ZestScript) {
