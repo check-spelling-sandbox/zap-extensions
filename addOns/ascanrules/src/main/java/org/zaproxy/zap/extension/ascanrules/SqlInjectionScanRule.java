@@ -1912,7 +1912,7 @@ public class SqlInjectionScanRule extends AbstractAppParamPlugin {
 
     /**
      * Replace body by stripping of pattern string. The URLencoded pattern will also be stripped
-     * off. The URL decoded pattern will not be stripped off, as this is not necessary of rour
+     * off. The URL decoded pattern will not be stripped off, as this is not necessary for our
      * purposes, and causes issues when attempting to decode parameter values such as '%' (a single
      * percent character) This is mainly used for stripping off a testing string in HTTP response
      * for comparison against the original response. Reference: TestInjectionSQL
