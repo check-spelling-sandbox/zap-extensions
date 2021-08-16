@@ -290,7 +290,7 @@ public class WorkerGenerator implements Runnable {
 
                 // loop for all the different file extensions
                 for (int b = 0; b < extToCheck.size(); b++) {
-                    // only test if we are surposed to
+                    // only test if we are supposed to
                     ExtToCheck extTemp = extToCheck.elementAt(b);
 
                     if (extTemp.toCheck()) {
