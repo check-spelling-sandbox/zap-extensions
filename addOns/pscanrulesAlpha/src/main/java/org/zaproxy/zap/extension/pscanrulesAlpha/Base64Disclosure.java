@@ -62,7 +62,7 @@ public class Base64Disclosure extends PluginPassiveScanner {
     }
 
     /**
-     * patterns used to identify strings withut each of the given character sets which is used to
+     * patterns used to identify strings without each of the given character sets which is used to
      * calculate the probability of this occurring, and eliminate potential Base64 strings which are
      * extremely improbable
      */
