@@ -1371,7 +1371,7 @@ public class ExtensionZest extends ExtensionAdaptor implements ProxyListener, Sc
 
         for (ScriptNode cnpNode : this.cnpNodes) {
             if (cnpNode.isNodeDescendant(node)) {
-                // Cant paste into a descendant of one of the cut/copied nodes
+                // Can't paste into a descendant of one of the cut/copied nodes
                 return false;
             }
             if (isPassive && !this.canPasteIntoPassiveElement(cnpNode)) {

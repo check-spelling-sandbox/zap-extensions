@@ -57,7 +57,7 @@ public class TokenAnalyserThread extends Thread {
         log.debug("run");
 
         if (cfm == null) {
-            log.debug("Cant run no map :(");
+            log.debug("Can't run no map :(");
             return;
         }
 

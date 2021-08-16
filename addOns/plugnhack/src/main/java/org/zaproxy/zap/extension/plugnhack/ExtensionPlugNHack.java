@@ -208,7 +208,7 @@ public class ExtensionPlugNHack extends ExtensionAdaptor
                     @Override
                     public void run() {
                         this.setName("ZAP-pnh-timeout");
-                        // Cant init extBreak here - Control wont have been initialized
+                        // Can't init extBreak here - Control wont have been initialized
                         boolean ctrlInit = false;
                         ExtensionBreak extBreak = null;
                         while (!shutdown) {
@@ -503,7 +503,7 @@ public class ExtensionPlugNHack extends ExtensionAdaptor
                     }
                     if (!injected) {
                         logger.debug(
-                                "Cant inject PnH script into {} no head tag found {}",
+                                "Can't inject PnH script into {} no head tag found {}",
                                 msg.getRequestHeader().getURI().toString(),
                                 msg.getResponseHeader().getStatusCode());
                     }
