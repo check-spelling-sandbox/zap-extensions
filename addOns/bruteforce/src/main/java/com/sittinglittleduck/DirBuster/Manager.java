@@ -528,7 +528,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
 
             }
             /*
-             * normal case sensative search
+             * normal case sensitive search
              */
             else {
                 isStartPoint = url.getPath().equals(startPoint);
@@ -935,7 +935,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
             }
         } else
         /*
-         * case sensative mode
+         * case sensitive mode
          */
         {
             if (!processedLinks.contains(link)) {
@@ -978,7 +978,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
 
     public void skipCurrentWork() {
         /*
-         * while this is a case sensative compare, it should not require to be done both ways
+         * while this is a case sensitive compare, it should not require to be done both ways
          */
         // stop work gen from adding more the the queue
         workGen.skipCurrent();

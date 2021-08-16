@@ -168,7 +168,7 @@ public class Config {
     public static boolean parseHTMLimg = true;
     public static boolean parseHTMLform = true;
     /*
-     * marker to say if we should treat the server case sensative
+     * marker to say if we should treat the server case sensitive
      */
     public static boolean caseInsensitiveMode = false;
 }
