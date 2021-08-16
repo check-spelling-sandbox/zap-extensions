@@ -1218,7 +1218,7 @@ public class HeartBleedActiveScanRule extends AbstractHostPlugin {
      * reads the requested number of bytes from the inputstream, blocking if necessary
      *
      * @param s the inputstream from which to read
-     * @param length the number of bytes to reas
+     * @param length the number of bytes to read
      * @return a byte array containing the requested number of bytes from the inputstream
      * @throws IOException
      */
