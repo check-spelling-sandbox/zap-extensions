@@ -153,7 +153,7 @@ public class SQLInjectionScanRule extends AbstractAppParamPlugin {
     }
 
     /**
-     * Get the description of the vulnerbaility when found
+     * Get the description of the vulnerability when found
      *
      * @return the vulnerability description
      */
