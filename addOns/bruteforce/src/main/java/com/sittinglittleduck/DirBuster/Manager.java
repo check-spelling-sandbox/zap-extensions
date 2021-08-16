@@ -144,7 +144,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     Vector<HeadlessResult> headlessResult = new Vector<>(100, 100);
 
     /*
-     * stores of information used to transer data to the gui when started with console args
+     * stores of information used to transfer data to the gui when started with console args
      *
      */
     private URL targetURL = null;
