@@ -100,7 +100,7 @@ public class HTMLparse extends Thread {
                             // System.out.println(href.getValue());
                             try {
                                 if (attr != null) {
-                                    // creates a full qualifed domain name, based on the page we
+                                    // creates a full qualified domain name, based on the page we
                                     // have just tested
                                     URL tempURL = new URL(work.getWork(), attr.getValue());
 
