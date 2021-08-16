@@ -1191,7 +1191,7 @@ public class diff_match_patch {
               text_insert = text_insert.substring(commonlength);
               text_delete = text_delete.substring(commonlength);
             }
-            // Factor out any common suffixies.
+            // Factor out any common suffixes.
             commonlength = diff_commonSuffix(text_insert, text_delete);
             if (commonlength != 0) {
               thisDiff = pointer.next();
