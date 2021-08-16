@@ -248,8 +248,8 @@ public class PaddingOracleScanRule extends AbstractAppParamPlugin {
     }
 
     /**
-     * Enumeration Utility which is able to manage all specifi encoding/decoding tasks that could be
-     * met during rule's testing
+     * Enumeration Utility which is able to manage all specific encoding/decoding tasks that could
+     * be met during rule's testing
      */
     public enum OracleEncoder {
         HEX {
