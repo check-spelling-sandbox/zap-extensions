@@ -47,7 +47,7 @@ public class HighlighterPanel extends AbstractPanel implements ActionListener {
     private HighlightEntryLineUi panelLineExtra;
     private HighlightSearchEntry extraHighlight;
 
-    private static String BUTTON_APPLY = "Appy";
+    private static String BUTTON_APPLY = "Apply";
 
     public HighlighterPanel(ExtensionHighlighter extensionHighlighter) {
         init();
