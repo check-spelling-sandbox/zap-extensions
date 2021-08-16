@@ -113,7 +113,7 @@ public class Worker implements Runnable {
                         parseHtml(httpResponse, response);
                     }
 
-                    response = FilterResponce.CleanResponce(response, work);
+                    response = FilterResponse.CleanResponse(response, work);
 
                     Thread.sleep(10);
                 }
@@ -244,7 +244,7 @@ public class Worker implements Runnable {
 
         // need to clean the base case of the item we are looking for
         String basecase =
-                FilterResponce.removeItemCheckedFor(
+                FilterResponse.removeItemCheckedFor(
                         work.getBaseCaseObj().getBaseCase(), work.getItemToCheck());
 
         if (m.find()) {

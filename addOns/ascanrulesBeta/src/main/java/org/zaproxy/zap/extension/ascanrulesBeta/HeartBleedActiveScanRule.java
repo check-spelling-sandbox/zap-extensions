@@ -977,7 +977,7 @@ public class HeartBleedActiveScanRule extends AbstractHostPlugin {
                                 break;
                             }
                             log.debug(
-                                    "Got a reponse from the server, but it was not a server hello 'Done' message");
+                                    "Got a response from the server, but it was not a server hello 'Done' message");
                         }
                     } catch (SocketTimeoutException es) {
                         throw new IOException(

@@ -42,30 +42,30 @@ public class DirBusterManager extends Manager {
     public synchronized void foundDir(
             URL url,
             int statusCode,
-            String responce,
+            String response,
             String baseCase,
-            String rawResponce,
+            String rawResponse,
             BaseCase baseCaseObj) {
         if (url.toString().endsWith("//")) {
             // For some reason DirBuster can go recursive and never finish
             log.debug("Ignoring url {}", url);
             return;
         }
-        super.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
+        super.foundDir(url, statusCode, response, baseCase, rawResponse, baseCaseObj);
         log.debug("DirBusterManager.foundDir {} code: {}", url, statusCode);
-        listener.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
+        listener.foundDir(url, statusCode, response, baseCase, rawResponse, baseCaseObj);
     }
 
     @Override
     public synchronized void foundFile(
             URL url,
             int statusCode,
-            String responce,
+            String response,
             String baseCase,
-            String rawResponce,
+            String rawResponse,
             BaseCase baseCaseObj) {
-        super.foundFile(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
-        listener.foundDir(url, statusCode, responce, baseCase, rawResponce, baseCaseObj);
+        super.foundFile(url, statusCode, response, baseCase, rawResponse, baseCaseObj);
+        listener.foundDir(url, statusCode, response, baseCase, rawResponse, baseCaseObj);
     }
 
     @Override

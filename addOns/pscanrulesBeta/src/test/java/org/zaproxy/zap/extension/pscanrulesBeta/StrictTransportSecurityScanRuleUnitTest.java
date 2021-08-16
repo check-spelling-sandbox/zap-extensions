@@ -63,7 +63,7 @@ class StrictTransportSecurityScanRuleUnitTest
     }
 
     @Test
-    void shouldNotRaiseAlertIfResponsIsNotHttps() throws URIException {
+    void shouldNotRaiseAlertIfResponseIsNotHttps() throws URIException {
         // Given
         HttpMessage msg = createMessage();
         msg.getRequestHeader().setSecure(false);

@@ -83,14 +83,14 @@ public class BruteForceURLFuzz implements Runnable {
             try {
                 URL headurl = new URL(firstPart);
 
-                int responceCode =
+                int responseCode =
                         manager.getHttpClient()
                                 .send(HttpMethod.HEAD, headurl.toString())
                                 .getStatusCode();
 
-                // if the responce code is method not implemented or fails
-                if (responceCode == HttpStatus.NOT_IMPLEMENTED
-                        || responceCode == HttpStatus.BAD_REQUEST) {
+                // if the response code is method not implemented or fails
+                if (responseCode == HttpStatus.NOT_IMPLEMENTED
+                        || responseCode == HttpStatus.BAD_REQUEST) {
                     // switch the mode to just GET requests
                     manager.setAuto(false);
                 }
@@ -117,7 +117,7 @@ public class BruteForceURLFuzz implements Runnable {
         BaseCase baseCaseObj = null;
 
         try {
-            // get fail responce code for a dir test
+            // get fail response code for a dir test
 
             baseCaseObj =
                     GenBaseCase.genURLFuzzBaseCase(manager, firstPart + urlFuzzStart, urlFuzzEnd);

@@ -78,7 +78,7 @@ public class Config {
      * Fixed bug in advanced options, which caused proxy setting to always get set
      * Add an option to limit the number of requests/sec
      * Improved the way results table works
-     * Fixed a bug that caused responce to be displayed incorrectly
+     * Fixed a bug that caused response to be displayed incorrectly
      * Fixed bug that selection from the tables to now work correctly
      * Fixed bug that caused blank extensions to stop working at all!
      *
@@ -130,7 +130,7 @@ public class Config {
      *
      *0.9.6
      *+ Dirbuster can now do file scanning with no extension.
-     *+ View responce now shows information about errors as well
+     *+ View response now shows information about errors as well
      *+ Removed all other imported source code, they will no be done via their own api's
      *
      *0.9.5
@@ -151,7 +151,7 @@ public class Config {
      *0.9.2
      *+ Corrected content checking mode when a 200 is returned for the 404 test, so it now works
      *+ minor changes to the interface
-     *+ now shows diff of basecase vs responce
+     *+ now shows diff of basecase vs response
      */
     /** Date the version was completed */
     public static final String versionDate = "06/05/2008";

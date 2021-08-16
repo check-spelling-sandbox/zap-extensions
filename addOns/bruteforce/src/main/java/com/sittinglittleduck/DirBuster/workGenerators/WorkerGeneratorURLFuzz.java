@@ -122,14 +122,14 @@ public class WorkerGeneratorURLFuzz implements Runnable {
             if (manager.getAuto()) {
                 try {
                     URL headurl = new URL(firstPart);
-                    int responceCode =
+                    int responseCode =
                             manager.getHttpClient()
                                     .send(HttpMethod.HEAD, headurl.toString())
                                     .getStatusCode();
-                    LOG.debug("Response code for head check = {}", responceCode);
-                    if (responceCode == HttpStatus.NOT_IMPLEMENTED
-                            || responceCode == HttpStatus.BAD_REQUEST
-                            || responceCode == HttpStatus.METHOD_NOT_ALLOWED) {
+                    LOG.debug("Response code for head check = {}", responseCode);
+                    if (responseCode == HttpStatus.NOT_IMPLEMENTED
+                            || responseCode == HttpStatus.BAD_REQUEST
+                            || responseCode == HttpStatus.METHOD_NOT_ALLOWED) {
                         LOG.debug(
                                 "Changing to GET only HEAD test returned 501(method no implemented) or a 400");
                         manager.setAuto(false);
@@ -170,7 +170,7 @@ public class WorkerGeneratorURLFuzz implements Runnable {
 
                     URL currentURL = new URL(firstPart + urlFuzzStart + line + urlFuzzEnd);
                     // BaseCase baseCaseObj = new BaseCase(currentURL, failcode, true, failurl,
-                    // baseResponce);
+                    // baseResponse);
                     // if the base case is null then we need to switch to content analysis mode
                     workQueue.put(new WorkUnit(currentURL, true, method, baseCaseObj, line));
                 }

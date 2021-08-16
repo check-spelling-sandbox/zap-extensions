@@ -115,18 +115,18 @@ public class WorkerGenerator implements Runnable {
             try {
                 URL headurl = new URL(firstPart);
 
-                int responceCode =
+                int responseCode =
                         manager.getHttpClient()
                                 .send(HttpMethod.HEAD, headurl.toString())
                                 .getStatusCode();
 
-                LOG.debug("Response code for head check = {}", responceCode);
+                LOG.debug("Response code for head check = {}", responseCode);
 
-                // if the responce code is method not implemented or if the head requests return
+                // if the response code is method not implemented or if the head requests return
                 // 400!
-                if (responceCode == HttpStatus.NOT_IMPLEMENTED
-                        || responceCode == HttpStatus.BAD_REQUEST
-                        || responceCode == HttpStatus.METHOD_NOT_ALLOWED) {
+                if (responseCode == HttpStatus.NOT_IMPLEMENTED
+                        || responseCode == HttpStatus.BAD_REQUEST
+                        || responseCode == HttpStatus.METHOD_NOT_ALLOWED) {
                     LOG.debug(
                             "Changing to GET only HEAD test returned 501(method no implemented) or a 400");
                     // switch the mode to just GET requests
@@ -143,7 +143,7 @@ public class WorkerGenerator implements Runnable {
         while ((!dirQueue.isEmpty() || !workQueue.isEmpty() || !manager.areWorkersAlive())
                 && recursive) {
             // get the dir we are about to process
-            String baseResponce = null;
+            String baseResponse = null;
             recursive = manager.isRecursive();
             BaseCase baseCaseObj = null;
 
@@ -173,7 +173,7 @@ public class WorkerGenerator implements Runnable {
                 URL failurl = null;
 
                 try {
-                    baseResponce = null;
+                    baseResponse = null;
 
                     baseCaseObj =
                             GenBaseCase.genBaseCase(manager, firstPart + currentDir, true, null);
@@ -251,7 +251,7 @@ public class WorkerGenerator implements Runnable {
 
                                 currentURL = new URL(firstPart + currentDir + line + "/");
                                 // BaseCase baseCaseObj = new BaseCase(currentURL, failcode, true,
-                                // failurl, baseResponce);
+                                // failurl, baseResponse);
                                 // if the base case is null then we need to switch to content
                                 // analysis mode
 
@@ -285,7 +285,7 @@ public class WorkerGenerator implements Runnable {
             // generate the list of files
             if (manager.getDoFiles()) {
 
-                baseResponce = null;
+                baseResponse = null;
                 URL failurl = null;
 
                 // loop for all the different file extensions
@@ -351,7 +351,7 @@ public class WorkerGenerator implements Runnable {
                                                                 + line
                                                                 + fileExtension);
                                         // BaseCase baseCaseObj = new BaseCase(currentURL, true,
-                                        // failurl, baseResponce);
+                                        // failurl, baseResponse);
                                         workQueue.put(
                                                 new WorkUnit(
                                                         currentURL,

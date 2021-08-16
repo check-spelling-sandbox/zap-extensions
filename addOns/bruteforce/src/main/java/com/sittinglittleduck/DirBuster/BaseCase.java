@@ -28,7 +28,7 @@ public class BaseCase {
     // be set to /wibble/
     private URL baseCaseURL;
 
-    // http responce code for the base case
+    // http response code for the base case
     private int returnCode = 0;
 
     // store of the actual base case if required

@@ -456,16 +456,16 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     }
 
     public synchronized void foundDir(
-            URL url, int statusCode, String Responce, BaseCase baseCaseObj) {
-        foundDir(url, statusCode, Responce, null, Responce, baseCaseObj);
+            URL url, int statusCode, String Response, BaseCase baseCaseObj) {
+        foundDir(url, statusCode, Response, null, Response, baseCaseObj);
     }
 
     public synchronized void foundDir(
             URL url,
             int statusCode,
-            String Responce,
+            String Response,
             String BaseCase,
-            String RawResponce,
+            String RawResponse,
             BaseCase baseCaseObj) {
         try {
 
@@ -581,16 +581,16 @@ public class Manager implements ProcessChecker.ProcessUpdate {
     }
 
     public synchronized void foundFile(
-            URL url, int statusCode, String Responce, BaseCase baseCaseObj) {
-        foundFile(url, statusCode, Responce, null, Responce, baseCaseObj);
+            URL url, int statusCode, String Response, BaseCase baseCaseObj) {
+        foundFile(url, statusCode, Response, null, Response, baseCaseObj);
     }
 
     public synchronized void foundFile(
             URL url,
             int statusCode,
-            String Responce,
+            String Response,
             String BaseCase,
-            String rawResponce,
+            String rawResponse,
             BaseCase baseCaseObj) {
 
         LOG.debug("File found: {} - {}", url.getFile(), statusCode);
