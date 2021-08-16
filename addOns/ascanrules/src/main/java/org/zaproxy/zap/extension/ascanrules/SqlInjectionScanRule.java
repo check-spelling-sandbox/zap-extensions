@@ -1180,7 +1180,7 @@ public class SqlInjectionScanRule extends AbstractAppParamPlugin {
                                                 + "\n"
                                                 + Constant.messages.getString(
                                                         MESSAGE_PREFIX
-                                                                + "alert.booleanbased.extrainfo.datanotexists");
+                                                                + "alert.booleanbased.extrainfo.datadoesnotexist");
 
                                 // raise the alert, and save the attack string for the
                                 // "Authentication Bypass" alert, if necessary
@@ -1363,7 +1363,7 @@ public class SqlInjectionScanRule extends AbstractAppParamPlugin {
                                         + "\n"
                                         + Constant.messages.getString(
                                                 MESSAGE_PREFIX
-                                                        + "alert.booleanbased.extrainfo.datanotexists");
+                                                        + "alert.booleanbased.extrainfo.datadoesnotexist");
 
                         // raise the alert, and save the attack string for the "Authentication
                         // Bypass" alert, if necessary
