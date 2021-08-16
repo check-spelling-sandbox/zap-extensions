@@ -86,7 +86,7 @@ class StrictTransportSecurityScanRuleUnitTest
     }
 
     @Test
-    void shouldNotRaiseAlertIfResponseHasWelformedHeaderAndValue() throws URIException {
+    void shouldNotRaiseAlertIfResponseHasWellFormedHeaderAndValue() throws URIException {
         // Given
         HttpMessage msg = createMessage();
         msg.getResponseHeader().addHeader(STS_HEADER, SHORT_VALUE);
