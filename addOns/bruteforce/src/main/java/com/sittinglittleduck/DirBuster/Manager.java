@@ -978,7 +978,7 @@ public class Manager implements ProcessChecker.ProcessUpdate {
 
     public void skipCurrentWork() {
         /*
-         * while this is a case snsative compare, it should not require to be done both ways
+         * while this is a case sensative compare, it should not require to be done both ways
          */
         // stop work gen from adding more the the queue
         workGen.skipCurrent();
