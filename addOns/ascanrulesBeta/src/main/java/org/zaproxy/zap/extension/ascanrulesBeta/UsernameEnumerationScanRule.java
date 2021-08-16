@@ -608,7 +608,7 @@ public class UsernameEnumerationScanRule extends AbstractAppPlugin {
                 }
 
                 // if we didn't hit something with one of the iterations for the parameter (ie, if
-                // the output when changing the parm is stable),
+                // the output when changing the param is stable),
                 // check if the parameter might be vulnerable by comparison its LCS with the
                 // original LCS for a valid login
                 if (longestCommonSubstringB != null && continueForParameter == true) {

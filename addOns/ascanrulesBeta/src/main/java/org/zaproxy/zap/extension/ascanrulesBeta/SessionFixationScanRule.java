@@ -1346,7 +1346,7 @@ public class SessionFixationScanRule extends AbstractAppPlugin {
                         parametername,
                         urlInResults);
                 if (urlInResults != null) {
-                    // now parse out and count the value of the url parm with the name:
+                    // now parse out and count the value of the url param with the name:
                     // currentHtmlParameter.getName()
 
                     // depending on the type of url parameter, get the parameters set in the output
