@@ -116,7 +116,7 @@ public class SamlExtensionSettingsUI extends JFrame
                     } else {
                         JOptionPane.showMessageDialog(
                                 SamlExtensionSettingsUI.this,
-                                SamlI18n.getMessage("saml.settings" + ".messages.notsaved"),
+                                SamlI18n.getMessage("saml.settings" + ".messages.unsaved"),
                                 SamlI18n.getMessage("saml.settings.messages.failed"),
                                 JOptionPane.ERROR_MESSAGE);
                     }
