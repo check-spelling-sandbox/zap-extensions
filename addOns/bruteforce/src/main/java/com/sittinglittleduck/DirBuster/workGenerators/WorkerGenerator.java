@@ -258,7 +258,7 @@ public class WorkerGenerator implements Runnable {
                                 // System.out.println("Gen about to add to queue");
                                 workQueue.put(
                                         new WorkUnit(currentURL, true, method, baseCaseObj, line));
-                                // System.out.println("Gen finshed adding to queue");
+                                // System.out.println("Gen finished adding to queue");
                                 LOG.debug("2 adding dir to work list {} {}", method, currentURL);
                             } catch (MalformedURLException e) {
                                 // TODO deal with bad line
