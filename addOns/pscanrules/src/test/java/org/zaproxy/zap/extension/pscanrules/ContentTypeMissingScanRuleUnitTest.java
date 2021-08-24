@@ -92,7 +92,7 @@ class ContentTypeMissingScanRuleUnitTest extends PassiveScannerTest<ContentTypeM
     }
 
     @Test
-    void shoudNotAlertIfContentTypePresentInResponse() throws HttpMalformedHeaderException {
+    void shouldNotAlertIfContentTypePresentInResponse() throws HttpMalformedHeaderException {
         // Given
         HttpMessage msg = createMessage();
         msg.getResponseHeader()
