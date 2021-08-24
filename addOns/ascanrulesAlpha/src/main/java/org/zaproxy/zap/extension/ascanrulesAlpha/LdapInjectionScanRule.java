@@ -102,7 +102,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
             errorMessages = errorMessageFlat.split(":");
 
             for (String errorMessage :
-                    errorMessages) { // for each error message for the given LDAP implemention
+                    errorMessages) { // for each error message for the given LDAP implementation
                 // compile it into a pattern
                 errorPattern = Pattern.compile(errorMessage);
 
@@ -170,7 +170,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                 break;
         }
         // how hard should we try to find an LDAP injection point (primarily by looking at how
-        // deeply embedded it might be in paremtheses)
+        // deeply embedded it might be in parentheses)
         // this is important in complex LDAP expressions which are deeply nested, i.e., where there
         // are various AND, OR, or NOT expressions
         // (&, |, ! respectively in LDAP)
@@ -406,7 +406,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                             .setMessage(getBaseMsg())
                             .raise();
 
-                    logBoolenInjection(
+                    logBooleanInjection(
                             getBaseMsg(), paramname, appendTrueAttack, randomparameterAttack);
 
                     // all done for this parameter. return.
@@ -421,12 +421,12 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
 
             // 2: try a separate case for where the LDAP injection point is *not* wrapped in
             // parentheses, like the following complete filter expression:
-            // "sn=Joe Bloggs"
+            // "sn=Joe Blogs"
             // this is very likely to be found in LDAP-based search pages and the like.
             // so what we do here is to use wildcards inserted into the middle of the original
             // value, to create a (hopefully) logically equivalent filter expression
             // like the following:
-            // "sn=Joe *loggs"
+            // "sn=Joe *logs"
             // but only do this if the param length is > 1, to eliminate false positives to some
             // degree.
             int paramLength = paramvalue.length();
@@ -506,7 +506,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                             .setMessage(getBaseMsg())
                             .raise();
 
-                    logBoolenInjection(
+                    logBooleanInjection(
                             getBaseMsg(), paramname, hopefullyTrueAttack, randomparameterAttack);
 
                     // all done for this parameter. return.
@@ -533,7 +533,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
         }
     }
 
-    private static void logBoolenInjection(
+    private static void logBooleanInjection(
             HttpMessage msg, String parameterName, String attack, String falseAttack) {
         if (!log.isDebugEnabled()) {
             return;
@@ -641,7 +641,7 @@ public class LdapInjectionScanRule extends AbstractAppParamPlugin {
                 }
                 return true; // threw an alert
             }
-        } // for each error message for the given LDAP implemention
+        } // for each error message for the given LDAP implementation
 
         return false; // did not throw an alert
     }
