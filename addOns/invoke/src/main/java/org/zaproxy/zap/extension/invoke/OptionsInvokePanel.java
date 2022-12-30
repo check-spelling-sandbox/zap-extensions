@@ -36,7 +36,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
 
     private static final long serialVersionUID = 1L;
 
-    private InvokableAppMultipleOptionsPanel appsOptionsPanel;
+    private InvocableAppMultipleOptionsPanel appsOptionsPanel;
 
     private OptionsInvokeTableModel tableModel = null;
     private ExtensionInvoke extension = null;
@@ -59,7 +59,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
         label.setWrapStyleWord(true);
         this.add(label, gbc);
 
-        appsOptionsPanel = new InvokableAppMultipleOptionsPanel(getTableModel());
+        appsOptionsPanel = new InvocableAppMultipleOptionsPanel(getTableModel());
 
         gbc.weighty = 1.0;
         this.add(appsOptionsPanel, gbc);
@@ -71,7 +71,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
     public void initParam(Object obj) {
         OptionsParam optionsParam = (OptionsParam) obj;
         InvokeParam invokeParam = optionsParam.getParamSet(InvokeParam.class);
-        getTableModel().setListInvokableApps(invokeParam.getListInvoke());
+        getTableModel().setListInvocableApps(invokeParam.getListInvoke());
         appsOptionsPanel.setRemoveWithoutConfirmation(!invokeParam.isConfirmRemoveApp());
     }
 
@@ -82,7 +82,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
     public void saveParam(Object obj) throws Exception {
         OptionsParam optionsParam = (OptionsParam) obj;
         InvokeParam invokeParam = optionsParam.getParamSet(InvokeParam.class);
-        invokeParam.setListInvoke(getTableModel().getListInvokableApps());
+        invokeParam.setListInvoke(getTableModel().getListInvocableApps());
         invokeParam.setConfirmRemoveApp(!appsOptionsPanel.isRemoveWithoutConfirmation());
 
         extension.replaceInvokeMenus(invokeParam.getListInvokeEnabled());
@@ -105,8 +105,8 @@ public class OptionsInvokePanel extends AbstractParamPanel {
         return "addon.invoke.options";
     }
 
-    private static class InvokableAppMultipleOptionsPanel
-            extends AbstractMultipleOptionsTablePanel<InvokableApp> {
+    private static class InvocableAppMultipleOptionsPanel
+            extends AbstractMultipleOptionsTablePanel<InvocableApp> {
 
         private static final long serialVersionUID = -6794316746694248277L;
 
@@ -128,7 +128,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
 
         private OptionsInvokeTableModel model;
 
-        public InvokableAppMultipleOptionsPanel(OptionsInvokeTableModel model) {
+        public InvocableAppMultipleOptionsPanel(OptionsInvokeTableModel model) {
             super(model);
 
             this.model = model;
@@ -138,7 +138,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
         }
 
         @Override
-        public InvokableApp showAddDialogue() {
+        public InvocableApp showAddDialogue() {
             if (addDialog == null) {
                 addDialog = new DialogAddApp(View.getSingleton().getOptionsDialog(null));
                 addDialog.pack();
@@ -146,14 +146,14 @@ public class OptionsInvokePanel extends AbstractParamPanel {
             addDialog.setApps(model.getElements());
             addDialog.setVisible(true);
 
-            InvokableApp app = addDialog.getApp();
+            InvocableApp app = addDialog.getApp();
             addDialog.clear();
 
             return app;
         }
 
         @Override
-        public InvokableApp showModifyDialogue(InvokableApp e) {
+        public InvocableApp showModifyDialogue(InvocableApp e) {
             if (modifyDialog == null) {
                 modifyDialog = new DialogModifyApp(View.getSingleton().getOptionsDialog(null));
                 modifyDialog.pack();
@@ -162,7 +162,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
             modifyDialog.setApp(e);
             modifyDialog.setVisible(true);
 
-            InvokableApp app = modifyDialog.getApp();
+            InvocableApp app = modifyDialog.getApp();
             modifyDialog.clear();
 
             if (!app.equals(e)) {
@@ -173,7 +173,7 @@ public class OptionsInvokePanel extends AbstractParamPanel {
         }
 
         @Override
-        public boolean showRemoveDialogue(InvokableApp e) {
+        public boolean showRemoveDialogue(InvocableApp e) {
             JCheckBox removeWithoutConfirmationCheckBox =
                     new JCheckBox(REMOVE_DIALOG_CHECKBOX_LABEL);
             Object[] messages = {REMOVE_DIALOG_TEXT, " ", removeWithoutConfirmationCheckBox};

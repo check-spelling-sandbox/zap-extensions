@@ -257,7 +257,7 @@ public class CharsetMismatchScanRule extends PluginPassiveScanner {
                                 + " "
                                 + getVariant(
                                         currentMismatch)) // Compound name (to account for variant
-                // designations, and multiple  alerts on single URI)
+                // designations, and multiple alerts on single URI)
                 .setRisk(getRisk())
                 .setConfidence(Alert.CONFIDENCE_LOW)
                 .setDescription(getDescription())

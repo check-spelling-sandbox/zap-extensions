@@ -86,8 +86,8 @@ class DialogAddApp extends AbstractFormDialog {
     private JButton chooseAppButton;
     private JButton chooseDirButton;
 
-    protected InvokableApp app;
-    private List<InvokableApp> apps;
+    protected InvocableApp app;
+    private List<InvocableApp> apps;
 
     private ConfirmButtonValidatorDocListener confirmButtonValidatorDocListener;
 
@@ -200,7 +200,7 @@ class DialogAddApp extends AbstractFormDialog {
     @Override
     protected boolean validateFields() {
         String displayName = getDisplayNameTextField().getText();
-        for (InvokableApp t : apps) {
+        for (InvocableApp t : apps) {
             if (displayName.equals(t.getDisplayName())) {
                 JOptionPane.showMessageDialog(
                         this,
@@ -217,7 +217,7 @@ class DialogAddApp extends AbstractFormDialog {
 
     @Override
     protected void performAction() {
-        app = new InvokableApp();
+        app = new InvocableApp();
         app.setDisplayName(getDisplayNameTextField().getText());
         app.setFullCommand(getFullCommandTextField().getText());
         String workingDir = getWorkingDirTextField().getText();
@@ -248,7 +248,7 @@ class DialogAddApp extends AbstractFormDialog {
         getParametersTextField().discardAllEdits();
     }
 
-    public InvokableApp getApp() {
+    public InvocableApp getApp() {
         return app;
     }
 
@@ -395,7 +395,7 @@ class DialogAddApp extends AbstractFormDialog {
         return enabledCheckBox;
     }
 
-    public void setApps(List<InvokableApp> apps) {
+    public void setApps(List<InvocableApp> apps) {
         this.apps = apps;
     }
 
